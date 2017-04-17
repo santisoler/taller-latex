@@ -1,0 +1,41 @@
+\documentclass[a4paper]{article}
+%\documentclass[a4paper,11pt,twoside,twocoulumn]{article}
+\usepackage[spanish]{babel} % diccionario que utilizará el documento
+%\usepackage[english]{babel}
+\usepackage[utf8]{inputenc} % codificación del texto fuente
+\usepackage[T1]{fontenc} % codificación del pdf de salida
+\usepackage{lmodern} % latin modern fonts
+\usepackage[a4paper,hmargin=2.5cm, vmargin=2.5cm]{geometry} % geometría de la hoja del pdf
+\usepackage{graphicx} % soporte mejorado para imágenes
+\usepackage{abstract} % permite crear resúmen
+\usepackage{amsmath} % entornos adicionales para expresiones matemáticas
+\usepackage{amssymb} % símbolos matemáticos adicionales
+\usepackage{natbib} % paquete necesario para incluir bibliografía
+
+
+\title{Template de un Artículo Científico}
+\author{Santiago Soler, Agustina Pesce}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+
+\begin{abstract}
+Este es el resumen del artículo
+\end{abstract}
+
+
+
+\section{Introducción}
+%\section*{Introducción} % si no queremos numerar las secciones agregamos un *
+
+Citar entre paréntesis \citep[e.g.][]{Tanaka1999}.
+Citar en texto a \citet{Tanaka1999}.
+
+
+%~ \bibliographystyle{apalike}
+%~ \bibliography{bibliography}
+%~ \addcontentsline{toc}{part}{References}
+\end{document}
