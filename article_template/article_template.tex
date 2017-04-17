@@ -1,4 +1,4 @@
-\documentclass[a4paper]{article}
+\documentclass[a4paper,12pt]{article}
 %\documentclass[a4paper,11pt,twoside,twocoulumn]{article}
 \usepackage[spanish]{babel} % diccionario que utilizará el documento, permite acentos y ñ
 %\usepackage[english]{babel} % usando inglés, los acentos y ñ se colocan: \'e \~n
@@ -6,33 +6,93 @@
 \usepackage[T1]{fontenc} % codificación del pdf de salida
 \usepackage{lmodern} % latin modern fonts
 \usepackage[a4paper,hmargin=2.5cm, vmargin=2.5cm]{geometry} % geometría de la hoja del pdf
-\usepackage{graphicx} % soporte mejorado para imágenes
-\usepackage{abstract} % permite crear resúmen
-\usepackage{amsmath} % entornos adicionales para expresiones matemáticas
-\usepackage{amssymb} % símbolos matemáticos adicionales
+\usepackage{graphicx} % paquete necesario para introducir imágenes
+%\usepackage{amsmath} % entornos adicionales para expresiones matemáticas
+%\usepackage{amssymb} % símbolos matemáticos adicionales
+\usepackage[bottom]{footmisc} % permite corregir posición de footnotes en caso de que haya figuras
 \usepackage{natbib} % paquete necesario para incluir bibliografía
 
 
 \title{Template de un Artículo Científico}
-\author{Santiago Soler, Agustina Pesce}
+\title{{\bf Template de un Artículo Científico}} % el \bf permite poner el texto en negrita
+\author{Isaac Newton}
 \date{\today}
+%\date{} % si no deseamos que aparezca la fecha dejamos en blanco el campo date
 
 \begin{document}
 
 \maketitle
 
-
 \begin{abstract}
-Este es el resumen del artículo
+Este es el resumen del artículo. Vamos a construir un template o plantilla de ejemplo de un artículo científico en {\LaTeX}. La idea de este documento es poseer un punto de partida a la hora de redactar un nuevo paper o informe de laboratorio.
 \end{abstract}
-
-
 
 \section{Introducción}
 %\section*{Introducción} % si no queremos numerar las secciones agregamos un *
 
-Citar entre paréntesis \citep[e.g.][]{Tanaka1999}.
-Citar en texto a \citet{Tanaka1999}.
+Este es el texto que va a ir en la introducción.
+Si no dejamos una línea entre medio, las oraciones pertenecen al mismo párrafo.
+
+En cambio, si dejamos una línea en blanco entre esta y la anterior, {\LaTeX} crea un nuevo párrafo.
+
+\subsection{Teoría del Primer Tema}
+
+Este párrafo esta dentro de una subsección. Observese el orden numérico que utiliza {\LaTeX}.
+
+\subsection{Teoría del Segundo Tema}
+
+Así es como podemos escribir una ecuación sencilla dentro de una párrafo $E=mc^2$, o bien podemos crear una nueva línea exclusiva para la ecuación:
+
+$$\sum_{n=0}^\infty ar^n = \frac{a}{1-r}$$
+
+Aunque si deseamos poder referenciar una ecuación, es necesario utilizar un entorno ``equation'', como se ve en la ecuación \ref{eq:ondas}.
+
+\begin{equation}
+\frac{\partial^2 u}{\partial^2 t} = c^2 \nabla^2 u
+\label{eq:ondas} % el campo label representa la etiqueta que representará únicamente a esta ecuación
+\end{equation}
+
+Es el compilador quien se encarga de asignar los números correspondientes a cada ecuación según el orden de aparición a lo largo del documento y colocar la numeración correspondiente a cada referencia que hagamos de ellas. Algo similar sucede cuando deseamos incluir notas al pie de página\footnote{Como esta nota al pie, por ejemplo}.
+
+Esta es una de las grandes ventajas que posee {\LaTeX} por sobre otros editores WYSIWYG. Las referencias de ecuaciones, figuras, tablas, páginas, secciones, bibliografía e incluso los Índices se generan de manera automática y en orden de aparición.
+
+\section{Métodos}
+
+Es muy probable que a la hora de escribir un artículo científico sea necesario incluir imágenes. Para ello haremos uso de un entorno llamado ``figure''.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.5\textwidth]{figs/latex.jpg}
+% Aquí cargamos la imagen. width especifica el ancho que ocupará. Entre llaves colocamos la dirección del archivo que queremos incluir en nuestro documento. Se suele recomendar colocar nuestras imágenes en una carpeta para mantener ordenado el directorio de trabajo.
+\caption{Este es el epígrafe de la figura, detalla qué se puede apreciar en la misma.}
+\label{fig:latex} % esta es la etiqueta que representará a esta figura en caso de querer referenciarla
+\end{figure}
+
+
+La letra que acompaña la apertura del entorno dictamina en qué posición de la página se colocará la misma. El compilador de {\LaTeX} intentará ubicar la figura de manera tal que no queden espacios sin ocupar al final de una página, líneas sueltas o títulos de secciones al final de la página sin el texto correspondiente. Es decir, tratando de optimizar la estética del documento.
+
+\begin{itemize}
+\item{h: Ubicará la figura aproximadamente en el lugar donde se colocó el entorno figure}
+\item{t: Se posicionará al principio de la página}
+\item{b: Se posicionará al final de la página}
+\item{p: Incluirá la imágen en una página para sí misma}
+\item{!: Sobrescribe los parámetros predefinidos y obliga a ubicarla donde se pide}
+\end{itemize}
+
+Al igual que con la ecuación, podemos referenciar a la Figura \ref{fig:latex}.
+
+
+
+\section{Resultados}
+
+\section{Conclusiones}
+
+
+\newpage
+
+%Podemos crear automáticamente un Índice para nuestro documento en una sola línea, el cual se modificará si cambiamos el documento.
+
+\tableofcontents{}
 
 
 %~ \bibliographystyle{apalike}
