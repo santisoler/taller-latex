@@ -33,7 +33,7 @@ Vamos a instalar una distribución de LaTeX (MikTex), el editor (TexMaker) y el 
 ## Licencia
 Copyright (c) 2017 Santiago R. Soler and Agustina Pesce. All rights reserved.
 
-Los templates, documentos, códigos y todo el material restante presente en este repositorio se encuentran disponibles bajo la licencia [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
+Los templates, documentos, códigos y todo el material restante presente en este repositorio se encuentran disponibles bajo la licencia [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
 
-![CreativeCommons](https://i.creativecommons.org/l/by/4.0/88x31.png)
+![CreativeCommons](https://licensebuttons.net/l/by-sa/4.0/88x31.png)
 
