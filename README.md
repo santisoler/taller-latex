@@ -30,8 +30,16 @@ Vamos a instalar una distribución de LaTeX (MikTex), el editor (TexMaker) y el 
 * [TexMaker](http://www.xm1math.net/texmaker/download.html)
 * [JabRef](http://www.jabref.org/#downloads)
 
+## Referencias y Recursos
+
+* [The No So Short Introduction to LaTeX](http://ftp.inf.utfsm.cl/pub/tex-archive/info/lshort/english/lshort.pdf)
+* [Wikibook de LaTeX](https://en.wikibooks.org/wiki/LaTeX)
+* The LaTeX Companion: Libro muy completo. [Aquí](http://ptgmedia.pearsoncmg.com/images/9780201362992/samplepages/0201362996.pdf) se puede leer un capítulo de muestra.
+* [OverLeaf](https://www.overleaf.com/): Plataforma online para escribir en colaboración
+* [SciWeavers](http://www.sciweavers.org/free-online-latex-equation-editor) y [CodeCogs](http://www.codecogs.com/latex/eqneditor.php): editores de ecuaciones online
+
 ## Licencia
-Copyright (c) 2017 Santiago R. Soler and Agustina Pesce. All rights reserved.
+Copyright (c) 2017 Santiago R. Soler and Agustina Pesce. Todos los derechos reservados.
 
 Los templates, documentos, códigos y todo el material restante presente en este repositorio se encuentran disponibles bajo la licencia [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
 
