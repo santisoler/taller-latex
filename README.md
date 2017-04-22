@@ -10,7 +10,7 @@ Instalamos la distribución de LaTeX texlive junto con paquetes extra, de idioma
 sudo apt-get install texlive texlive-latex-extra texlive-lang-spanish texlive-lang-english texlive-publishers
 ```
 
-Instalamos un editor para LaTeX, podemos ooptar por TexMaker o Kile:
+Instalamos un editor para LaTeX, podemos optar por TexMaker o Kile:
 ```
 sudo apt-get install texmaker
 
