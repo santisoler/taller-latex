@@ -1,8 +1,8 @@
-# Taller LaTeX @ IGSV
+# Taller Introductorio a LaTeX: Cómo producir documentos de calidad
 
 ## Software Necesario para el Taller
 
-### Linux
+### GNU/Linux
 #### Para Debian/Ubuntu y derivados:
 
 Instalamos la distribución de LaTeX texlive junto con paquetes extra, de idiomas para español e inglés y un paquete adicional para clases de documentos adicionales utilizados por diversos journals científicos:
