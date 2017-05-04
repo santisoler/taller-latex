@@ -4,6 +4,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{fancyvrb}
+\definecolor{new_green}{HTML}{347F1F}
+
 
 \author{Lic. Agustina Pesce \\ Lic. Santiago Soler}
 \title[Taller de {\LaTeX}]{Taller Introductorio a {\LaTeX}: \\ Cómo producir documentos de Calidad}
@@ -187,5 +189,250 @@ Vamos a necesitar una distribución de \LaTeX{}, un editor y un administrador de
 \end{frame}
 
 \section{Hola Mundo en \LaTeX}
+\begin{frame}[fragile]{Hola Mundo en \LaTeX}
+\begin{enumerate}
+\item Creamos una carpeta donde vamos a colocar todos los archivos necesarios para la creación de nuestro articulo
+\item El archivo \LaTeX{} tendrá la extensión .tex
+% Mostramos en vivo el TexMaker. TexMaker > Asistente > Crear Doc. Nuevo > Article
+\item Nuestro primer documento: \\
+{\color{new_green}
+\begin{verbatim}
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+\begin{document}
+Hola Mundo
+\end{document}
+\end{verbatim}
+}
+\item Compilamos: \LaTeX{} genera un .pdf en la carpeta del proyecto
+% Explicar archivos auxiliares, qué es lo importante -> .tex
+\end{enumerate}
+\end{frame}
+
+\section{Documento Sencillo de \LaTeX{}}
+
+\begin{frame}[fragile]{Estructura básica de un documento \LaTeX}
+
+\textbf{Estructura básica}
+
+Un documento básico de \LaTeX{} se compone de dos partes:
+\begin{itemize}
+\item Preámbulo del documento
+{\color{new_green}
+\begin{verbatim}
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\end{verbatim}
+}
+\item Cuerpo del documento
+{\color{new_green}
+\begin{verbatim}
+\begin{document}
+Este es el cuerpo de mi documento.
+\end{document}
+\end{verbatim}
+}
+\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}[fragile]{Espacios y Párrafos}
+
+\metroset{block=fill}
+\begin{block}{Espacios en blanco}
+Los espacios en blanco y tabulaciones son tratados como simples espacios por \LaTeX{}. Múltiples espacios son considerados como un único espacio. Los espacios al inicio del párrafo son ignorados.
+\end{block}
+
+\metroset{block=fill}
+\begin{block}{Párrafos}
+Los párrafos deben ser separados por una línea en blanco.
+\end{block}
+
+\vspace{1em}
+
+\begin{columns}
+\column{0.5\textwidth}
+\begin{Verbatim}[fontsize=\footnotesize]
+   No importa si ponemos muchos 
+espacios      entre palabras.
+   
+La línea en blanco indica que 
+terminó el párrafo anterior y 
+comienza uno nuevo.
+\end{Verbatim}
+\column{0.5\textwidth}
+   No importa si ponemos muchos 
+espacios      entre palabras.
+   
+La línea en blanco indica que 
+terminó el párrafo anterior y 
+comienza uno nuevo.
+\end{columns}
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Caracteres Especiales}
+\metroset{block=fill}
+\begin{block}{Caracteres Especiales}
+Los siguientes símbolos son caracteres reservados que poseen un significado especial para \LaTeX. Si los introducimos directamente no va a imprimirlos en el pdf, sino que hará que \LaTeX se comporte de forma que no deseamos.
+\end{block}
+
+\begin{center}
+\# \$ \% \^{} \& \_ \{ \} \~{} \textbackslash
+\end{center}
+
+Para introducirlos debemos hacerlo de la siguiente manera:
+\begin{center}
+{\color{new_green}
+\begin{Verbatim}
+\# \$ \% \^{} \& \_ \{ \} \~{} \textbackslash
+\end{Verbatim}
+}
+\end{center}
+
+\end{frame}
+
+\begin{frame}[fragile]{Caracteres Especiales}
+\metroset{block=fill}
+\begin{block}{Comillas}
+Las comillas deben escribirse de la siguiente forma:
+\end{block}
+
+\begin{columns}
+\column{0.5\textwidth}
+{\color{new_green}
+\begin{Verbatim}
+``comillas''
+\end{Verbatim}
+}
+\hfill
+\column{0.5\textwidth}
+``comillas''
+\end{columns}
+
+
+\begin{block}{Comentarios en texto}
+Utilizando el símbolo \% podemos agregar comentarios en el texto que no serán impresos en el .pdf
+\end{block}
+
+\begin{columns}
+\column{0.5\textwidth}
+{\color{new_green}
+\begin{Verbatim}
+Este texto tiene un
+comentario % comentario
+\end{Verbatim}
+}
+\hfill
+\column{0.5\textwidth}
+Este texto tiene un
+comentario % comentario
+\end{columns}
+
+\end{frame}
+
+\begin{frame}[fragile]{Comandos \LaTeX}
+\metroset{block=fill}
+\begin{block}{Comandos \LaTeX}
+Los comandos de \LaTeX{} comienzan con una barra invertida: \textbackslash
+\end{block}
+
+\textbf{Ejemplos:}
+\begin{columns}
+\column{0.5\textwidth}
+{\color{new_green}
+\begin{verbatim}
+\textbf{Texto en negrita}
+\textit{Texto en italic}
+{\small Texto small}
+{\huge Texto huge}
+\end{verbatim}
+}
+\hfill
+\column{0.5\textwidth}
+\textbf{Texto en negrita} \\
+\textit{Texto en italic} \\
+{\small Texto small} \\
+{\huge Texto huge}
+\end{columns}
+
+\vspace{-1em}
+\metroset{block=fill}
+\begin{block}{Otros comandos \LaTeX}
+Otros comandos \LaTeX{} más complejos tienen la siguiente sintaxis:
+\vspace{-1em}
+\begin{verbatim}
+\comando[opciones]{parámetro}
+\end{verbatim}
+\end{block}
+\end{frame}
+
+
+\section{Fórmulas Matemáticas}
+
+\begin{frame}[fragile]{Fórmulas Matemáticas}
+\metroset{block=fill}
+\begin{block}{Fórmulas matemáticas}
+\LaTeX{} nos permite escribir ecuaciones y símbolos matemáticos de forma muy sencilla. Para hacerlo usaremos el símbolo \$ para indicar el inicio y el final de una ecuación en línea. Y utilizamos dos \$\$ para situar la ecuación en una línea propia.
+\end{block}
+
+\textbf{Ejemplo:}
+
+Esta es una ecuación en línea: $E = mc^2$
+\vspace{-1em}
+{\color{new_green}
+\begin{verbatim}
+Esta es una ecuación en línea: $E = mc^2$
+\end{verbatim}
+}
+
+Esta es una ecuación en su propia línea: 
+$$E = mc^2$$
+
+\vspace{-1em}
+{\color{new_green}
+\begin{verbatim}
+Esta es una ecuación en línea:
+$$E = mc^2$$
+\end{verbatim}
+}
+\end{frame}
+
+\begin{frame}[fragile]{Entorno Equation}
+\metroset{block=fill}
+\begin{block}{Entornos}
+\LaTeX{} posee estructuras llamadas entornos que se abren con \textbackslash begin\{entorno\} y se cierran con \textbackslash end\{entorno\}
+\end{block}
+
+\metroset{block=fill}
+\begin{block}{Entorno Equation}
+Uno de los entornos que utilizaremos es el ``equation''. Nos permite numerar la ecuación y luego hacer referencia a ella.
+\end{block}
+
+\vspace{-1em}
+
+\textbf{Ejemplo:}
+
+\vspace{-1em}
+
+\begin{verbatim}
+\begin{equation}
+\sum_{k=0}^{n-1} ak^r = a \frac{1-r^n}{1-r}
+\end{equation}
+\end{verbatim}
+
+\vspace{-2em}
+
+\begin{equation}
+\sum_{k=0}^{n-1} ak^r = a \frac{1-r^n}{1-r}
+\end{equation}
+\end{frame}
+
+\section{Trabajo Práctico}
 
 \end{document}
