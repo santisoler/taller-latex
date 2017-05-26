@@ -1,0 +1,100 @@
+\documentclass[11pt]{beamer}
+\usetheme[progressbar=frametitle]{metropolis}
+%\usetheme{Singapore}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{fancyvrb}
+\definecolor{new_green}{HTML}{347F1F}
+
+
+\author{Lic. Agustina Pesce \\ Lic. Santiago Soler}
+\title[Taller de {\LaTeX}]{Taller Introductorio a {\LaTeX}: \\ Cómo producir documentos de Calidad}
+\subtitle{Tercer Encuentro: Bibligrafía}
+%\setbeamercovered{transparent} 
+%\setbeamertemplate{navigation symbols}{} 
+%\logo{} 
+%\institute{} 
+\date{}
+%\subject{} 
+\begin{document}
+
+\maketitle
+
+\section{Bibliografía}
+
+\begin{frame}{Bibliografía}
+En los artículos científicos es obligación incluir las fuentes a partir de las cuales partimos en el desarrollo del trabajo que queremos dar a conocer. Por un lado esto le da sustento a nuestro trabajo, y por el otro nos permite darle crédito al trabajo de quienes nos preceden, así como nuestros trabajos serán reconocidos cuando sean citados.
+
+\LaTeX{} nos ofrece dos formas de incluir bibliografías (o referencias) y citarlas en el texto:
+\begin{itemize}
+\item{Bibliografía Simple}
+\item{\textsc{Bib}\TeX{}}
+\end{itemize}
+\end{frame}
+
+\section{Bibliografía Simple}
+
+\begin{frame}[fragile]{Bibliografía Simple}
+Si nuestra intención es escribir un documento sencillo, con poca bibliografía que no volveremos a utilizar en un futuro, la opción más recomendada es utilizar el entorno ``thebibliography' al final del documento:
+
+{\color{new_green} \scriptsize
+\begin{verbatim}
+\renewcommand{\refname}{Bibliografía}
+\begin{thebibliography}{2}
+
+\end{thebibliography}
+\end{verbatim}
+}
+
+Por defecto \LaTeX{} titula la sección de bibliografía como Referencias (como traducción de References en inglés). Para modificarlo hacemos uso de la primer línea.
+\end{frame}
+
+\begin{frame}[fragile]{Bibliografía Simple}
+Para introducir una entrada en la bibliografía lo hacemos a través de ``\textbackslash bibitem\{label\}''
+
+{\color{new_green} \scriptsize
+\begin{verbatim}
+\renewcommand{\refname}{Bibliografía}
+\begin{thebibliography}{2}
+
+\bibitem{Noether1918}
+  Emmy Noether (1918)
+  ``Invariante Variationsprobleme''.
+  Nachr. D. König. Gesellsch. D. Wiss. Zu Göttingen, Math-phys. Klasse.
+
+\bibitem{Feynman1966}
+  Feynman, Richard P. (1966).
+  ``The Development of the Space-Time View of Quantum Electrodynamics''.
+  Science
+
+\end{thebibliography}
+\end{verbatim}
+}
+\end{frame}
+
+
+\begin{frame}[fragile]{Bibliografía Simple}
+Luego, estas referencias bibliográficas pueden ser citadas en el cuerpo del texto con el comando ``\textbackslash cite\{label\}''.
+
+{\color{new_green} \scriptsize
+\begin{verbatim}
+Según \cite{Noether1918}, a cada simetría continua de un sistema
+físico le corresponde una constante de movimiento, y viceversa.
+\end{verbatim}
+}
+
+Como etiqueta podemos utilizar lo que deseemos, aunque por lo general se utiliza el apellido del primer autor acompañado por el año de publicación.
+
+\end{frame}
+
+\section{\textsc{Bib}\TeX{}}
+
+\begin{frame}{\textsc{Bib}\TeX{}}
+La otra opción para incluir bibliografías es hacerlo a través de \textsc{Bib}\TeX{}.
+
+\textsc{Bib}\TeX{} nos permite construir bases de datos de referencias bibliográficas que son almacenadas en archivos .bib
+
+
+\end{frame}
+
+\end{document}
