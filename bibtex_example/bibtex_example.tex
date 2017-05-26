@@ -1,0 +1,23 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{natbib}
+\author{Autor}
+\title{Bibligrafía con \textsc{Bib}\TeX{}}
+
+
+\begin{document}
+
+\maketitle
+
+Podemos citar a \citet{Wegener1966}. Las citas pueden incorporarse entre paréntesis \citep{Higgs1964}.
+
+O bien podemos nombrar muchos papers dentro de un mismo paréntesis \citep{Wegener1966, Higgs1964}.
+
+Y tambien podemos incluir texto dentro de esos paréntesis \citep[e.g.][]{Wegener1966, Higgs1964}
+
+% \nocite{*} % Muestra entradas de la bibliografía aunque no hayan sido citadas en el texto
+\bibliographystyle{apalike}
+\bibliography{bibtex/bibtex-example.bib}
+\end{document}

@@ -1,0 +1,20 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Autor}
+\title{Bibliografía Simple}
+
+\begin{document}
+
+\maketitle
+
+Según \cite{Noether1918}, a cada simetría continua de un sistema físico le corresponde una constante de movimiento, y viceversa.
+
+\renewcommand{\refname}{Bibliografía} % cambiamos el nombre de la bibliografia, de Referencias a Bibliografía
+\begin{thebibliography}{2}
+\bibitem{Noether1918} Emmy Noether (1918) ``Invariante Variationsprobleme''. Nachr. D. König. Gesellsch. D. Wiss. Zu Göttingen, Math-phys. Klasse.
+\bibitem{Feynman1966} Feynman, Richard P. (1966). ``The Development of the Space-Time View of Quantum Electrodynamics''. Science
+\end{thebibliography}
+
+\end{document}
