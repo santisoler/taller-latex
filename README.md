@@ -6,7 +6,7 @@ El taller posee como objetivo introducir a los interesados y las interesadas en 
 
 ## Duración y Lugar
 
-El Taller se llevará a cabo los días 7, 9, 21, 23, 28 y 30 de Junio del 2017, en el horario de 14:00 a 16:00, en el Aula de Posgrado de la Facultad de Ciencias Exactas, Físicas y Naturales de la UNSJ.
+El Taller se llevará a cabo los días 7, 9, 21, 23, 28 y 30 de Junio del 2017, en el horario de 14:00 a 18:00, en el Aula de Posgrado de la Facultad de Ciencias Exactas, Físicas y Naturales de la UNSJ.
 
 ## Requisitos
 
