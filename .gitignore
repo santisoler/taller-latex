@@ -3,7 +3,7 @@
 
 ## Main PDF file
 carta-presentacion-curso.pdf
-*/beamer-clase1.pdf
+*/beamer-clase*.pdf
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
@@ -13,6 +13,7 @@ carta-presentacion-curso.pdf
 *.fls
 *.out
 *.toc
+*.tex.backup
 
 ## Intermediate documents:
 *.dvi
