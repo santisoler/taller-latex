@@ -89,12 +89,35 @@ Como etiqueta podemos utilizar lo que deseemos, aunque por lo general se utiliza
 
 \section{\textsc{Bib}\TeX{}}
 
-\begin{frame}{\textsc{Bib}\TeX{}}
+\begin{frame}[fragile]{\textsc{Bib}\TeX{}}
 La otra opción para incluir bibliografías es hacerlo a través de \textsc{Bib}\TeX{}.
 
-\textsc{Bib}\TeX{} nos permite construir bases de datos de referencias bibliográficas que son almacenadas en archivos .bib
+\textsc{Bib}\TeX{} nos permite construir bases de datos de referencias bibliográficas que son almacenadas en archivos ``.bib''.
 
+Veamos un ejemplo de la entrada de un artículo en un .bib:
+
+{\color{new_green} \scriptsize
+\begin{verbatim}
+@article{greenwade93,
+    author  = "George D. Greenwade",
+    title   = "The {C}omprehensive {T}ex {A}rchive {N}etwork ({CTAN})",
+    year    = "1993",
+    journal = "TUGBoat",
+    volume  = "14",
+    number  = "3",
+    pages   = "342--351"
+}
+\end{verbatim}
+}
+\end{frame}
+
+\begin{frame}{\textsc{Bib}\TeX{}}
+Por suerte, existen herramientas gráficas que nos facilitan la tarea de construir estas bases de datos, incorporando herramientas útiles como búsquedas online.
+
+Una de ellas es JabRef.
 
 \end{frame}
+
+
 
 \end{document}
