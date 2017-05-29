@@ -28,8 +28,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.69842876"
-     inkscape:cx="430.30154"
-     inkscape:cy="257.44411"
+     inkscape:cx="554.80742"
+     inkscape:cy="117.55868"
      inkscape:document-units="mm"
      inkscape:current-layer="layer3"
      showgrid="false"
@@ -141,8 +141,14 @@
      style="display:inline"
      inkscape:label="Background"
      id="layer2"
-     inkscape:groupmode="layer"
-     sodipodi:insensitive="true">
+     inkscape:groupmode="layer">
+    <rect
+       y="-0.50266403"
+       x="-0.25563899"
+       height="209.49002"
+       width="298.09906"
+       id="rect4656-3"
+       style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.50815165;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <image
        width="149.43317"
        height="101.2719"
@@ -182,13 +188,6 @@
      id="layer3"
      inkscape:groupmode="layer">
     <rect
-       y="-0.50266379"
-       x="-0.25563899"
-       height="209.49002"
-       width="298.09906"
-       id="rect4656"
-       style="fill:#ffffff;fill-opacity:0.61870506;stroke:none;stroke-width:0.50815165;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <rect
        style="fill:#ffffff;fill-opacity:0.78424659;stroke:none;stroke-width:0.11411606;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect7344"
        width="132.81085"
@@ -209,6 +208,13 @@
        height="22.681595"
        x="8.8710318"
        y="138.34358" />
+    <rect
+       y="-0.50266379"
+       x="-0.25563899"
+       height="209.49002"
+       width="298.09906"
+       id="rect4656"
+       style="fill:#ffffff;fill-opacity:0.59712231;stroke:none;stroke-width:0.50815165;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <rect
        y="165.59505"
        x="8.8710318"
@@ -264,7 +270,8 @@
      transform="translate(0,-87)"
      id="layer1"
      inkscape:groupmode="layer"
-     inkscape:label="Texto">
+     inkscape:label="Texto"
+     sodipodi:insensitive="true">
     <flowRoot
        transform="matrix(0.26458333,0,0,0.26458333,51.626941,80.011653)"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:25px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"

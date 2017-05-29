@@ -1,4 +1,4 @@
-# Taller Introductorio a LaTeX: Cómo producir documentos de calidad
+![Poster Taller](https://raw.githubusercontent.com/santis19/taller-latex/master/poster/poster-taller-latex.png)
 
 ## Objetivos
 
