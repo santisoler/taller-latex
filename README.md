@@ -1,7 +1,8 @@
 ![Poster Taller](https://raw.githubusercontent.com/santis19/taller-latex/master/poster/poster-taller-latex.png)
 
-## Si querés participar del Taller, ingresá tus datos [acá](https://docs.google.com/forms/d/e/1FAIpQLSeSHYbCO4y1PWeqs_dhnhWpDhGIMngRbVLaX2Xg48lGQwnnFA/viewform?usp=sf_link)
+## Si tenés intenciones de participar del Taller, ingresá tus datos [acá](https://docs.google.com/forms/d/e/1FAIpQLSeSHYbCO4y1PWeqs_dhnhWpDhGIMngRbVLaX2Xg48lGQwnnFA/viewform?usp=sf_link)
 
+Tus datos no serán publicados en ningún sitio, solo los recopilamos para tener una lista de contactos y conocer las necesidades para cada área del conocimiento.
 
 ## Sobre el Taller...
 ### Objetivos
