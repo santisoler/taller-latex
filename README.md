@@ -1,14 +1,18 @@
 ![Poster Taller](https://raw.githubusercontent.com/santis19/taller-latex/master/poster/poster-taller-latex.png)
 
-## Objetivos
+## Si querés participar del Taller, ingresá tus datos [acá](https://docs.google.com/forms/d/e/1FAIpQLSeSHYbCO4y1PWeqs_dhnhWpDhGIMngRbVLaX2Xg48lGQwnnFA/viewform?usp=sf_link)
+
+
+## Sobre el Taller...
+### Objetivos
 
 El taller posee como objetivo introducir a los interesados y las interesadas en el sistema de composición de textos LaTeX y la final elaboración de un documento propio, en el cual se utilicen las herramientas descriptas a lo largo del mismo. Se otorgará especial énfasis a la producción de artı́culos cientı́ficos, informes de laboratorio y redacción de Tesis. Es nuestra intención que cada participante pueda utilizar las horas de taller tanto para incorporar los conocimientos básicos de LaTeX, ası́ como también producir un documento que le sea útil en su presente trabajo, estudio, investigación, etc. Además se introducirán conocimientos sobre el uso de software afines a LaTeX, tal como la construcción de base de datos bibliográficas a través de la herramienta BibTeX.
 
-## Duración y Lugar
+### Duración y Lugar
 
 El Taller se llevará a cabo los días 7, 9, 21, 23, 28 y 30 de Junio del 2017, en el horario de 14:00 a 18:00, en el Aula de Posgrado de la Facultad de Ciencias Exactas, Físicas y Naturales de la UNSJ.
 
-## Requisitos
+### Requisitos
 
 Se solicita a los participantes traer su notebook con sistema operativo a elección (recomendamos utilizar Software Libre como GNU/Linux) y el software que utilizaremos ya instalados.
 
