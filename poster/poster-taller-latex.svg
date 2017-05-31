@@ -28,13 +28,13 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.69842876"
-     inkscape:cx="554.80742"
+     inkscape:cx="344.33499"
      inkscape:cy="117.55868"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1366"
-     inkscape:window-height="715"
+     inkscape:window-width="1280"
+     inkscape:window-height="971"
      inkscape:window-x="0"
      inkscape:window-y="29"
      inkscape:window-maximized="1" />
@@ -133,7 +133,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -270,8 +270,7 @@
      transform="translate(0,-87)"
      id="layer1"
      inkscape:groupmode="layer"
-     inkscape:label="Texto"
-     sodipodi:insensitive="true">
+     inkscape:label="Texto">
     <flowRoot
        transform="matrix(0.26458333,0,0,0.26458333,51.626941,80.011653)"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:25px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
@@ -567,7 +566,7 @@
              width="345.61633"
              id="rect5517-1" /></flowRegion><flowPara
            id="flowPara5523-2"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.00000381px;line-height:15.11811066px;font-family:FreeSans;-inkscape-font-specification:FreeSans;text-align:center;text-anchor:middle;fill:#eeeeee;fill-opacity:1">¡Descargá el software que vamos a usar y trealo instalado!</flowPara></flowRoot>    </g>
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.00000381px;line-height:15.11811066px;font-family:FreeSans;-inkscape-font-specification:FreeSans;text-align:center;text-anchor:middle;fill:#eeeeee;fill-opacity:1">¡Descargá el software que vamos a usar y traelo instalado!</flowPara></flowRoot>    </g>
     <g
        id="g5256"
        transform="translate(0.37629798)">
