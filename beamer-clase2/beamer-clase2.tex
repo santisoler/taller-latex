@@ -133,11 +133,35 @@
  \end{equation}
 \end{frame}
 
-\begin{frame}{Artículo Científico - Referencias Cruzadas}
- Con \LaTeX{}, podemos hacer fácilmente referencias a figuras, tablas y ecuaciones de nuestro documento.
- El mecanismo es muy fácil:
- $\backslash label \{ X \}$ - Con este comando se etiqueta el objeto. \\
- $\backslash ref \{ X \}$ - Con este comando se referencia  el objeto en el texto.
+\begin{frame}[fragile]{Artículo Científico - Referencias Cruzadas}
+Con \LaTeX{}, podemos hacer fácilmente referencias a figuras, tablas y ecuaciones de nuestro documento.
+El mecanismo es muy fácil:
+$\backslash label \{ X \}$ - Con este comando se etiqueta el objeto. \\
+$\backslash ref \{ X \}$ - Con este comando se referencia  el objeto en el texto.
+ 
+La etiqueta puede ser elegida libremente sin ningún criterio, aunque es recomendable agregar un pequeño indicador de qué objeto estamos referenciando. Por ejemplo, en el caso de ecuaciones:
+ 
+\begin{columns}
+\column{0.4\textwidth}
+{\color{new_green} \scriptsize
+\begin{verbatim}
+\begin{equation}
+  {d\over dt }\frac{\partial L} -
+  \frac{\partial L}{\partial x} 
+  {\partial \dot{x}} = 0
+\label{eq:lagrange}
+\end{equation}
+\end{verbatim}
+}
+\column{0.4\textwidth}
+\begin{equation}
+  \frac{\partial L}{\partial x} - 
+  {d\over dt }\frac{\partial L}
+  {\partial \dot{x}} = 0
+\label{eq:lagrange}
+\end{equation}
+\end{columns}
+
 \end{frame}
 
 \begin{frame}[fragile]{Artículo Científico - Figuras}
