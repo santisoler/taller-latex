@@ -1,0 +1,270 @@
+\documentclass[11pt]{beamer}
+\usetheme[progressbar=frametitle]{metropolis}
+%\usetheme{Singapore}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{fancyvrb}
+\usepackage{hyperref}
+\definecolor{new_green}{HTML}{347F1F}
+
+
+\author{Lic. Agustina Pesce \\ Lic. Santiago Soler}
+\title[Taller de {\LaTeX}]{Taller Introductorio a {\LaTeX}: \\ Cómo producir documentos de Calidad}
+\subtitle{Tercer Encuentro: Bibligrafía}
+%\setbeamercovered{transparent} 
+%\setbeamertemplate{navigation symbols}{} 
+%\logo{} 
+%\institute{} 
+\date{}
+%\subject{} 
+
+\newcommand{\BibTeX}{\textsc{Bib}\TeX{}}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Bibliografía}
+
+
+\begin{frame}{Bibliografía}
+En los artículos científicos es obligación incluir las fuentes a partir de las cuales partimos en el desarrollo del trabajo que queremos dar a conocer. Por un lado esto le da sustento a nuestro trabajo, y por el otro nos permite darle crédito al trabajo de quienes nos preceden, así como nuestros trabajos serán reconocidos cuando sean citados.
+
+\LaTeX{} nos ofrece dos formas de incluir bibliografías (o referencias) y citarlas en el texto:
+\begin{itemize}
+\item{Bibliografía Simple}
+\item{\BibTeX{}}
+\end{itemize}
+\end{frame}
+
+
+\section{Bibliografía Simple}
+
+
+\begin{frame}[fragile]{Bibliografía Simple}
+Si nuestra intención es escribir un documento sencillo, con poca bibliografía que no volveremos a utilizar en un futuro, la opción más recomendada es utilizar el entorno ``thebibliography' al final del documento:
+
+{\color{new_green} \scriptsize
+\begin{verbatim}
+\renewcommand{\refname}{Bibliografía}
+\begin{thebibliography}{2}
+
+\end{thebibliography}
+\end{verbatim}
+}
+
+Por defecto \LaTeX{} titula la sección de bibliografía como Referencias (como traducción de References en inglés). Para modificarlo hacemos uso de la primer línea.
+\end{frame}
+
+
+\begin{frame}[fragile]{Bibliografía Simple}
+Para introducir una entrada en la bibliografía lo hacemos a través de ``\textbackslash bibitem\{label\}''
+
+{\color{new_green} \scriptsize
+\begin{verbatim}
+\renewcommand{\refname}{Bibliografía}
+\begin{thebibliography}{2}
+
+\bibitem{Noether1918}
+  Emmy Noether (1918)
+  ``Invariante Variationsprobleme''.
+  Nachr. D. König. Gesellsch. D. Wiss. Zu Göttingen, Math-phys. Klasse.
+
+\bibitem{Feynman1966}
+  Feynman, Richard P. (1966).
+  ``The Development of the Space-Time View of Quantum Electrodynamics''.
+  Science
+
+\end{thebibliography}
+\end{verbatim}
+}
+\end{frame}
+
+
+\begin{frame}[fragile]{Bibliografía Simple}
+Luego, estas referencias bibliográficas pueden ser citadas en el cuerpo del texto con el comando ``\textbackslash cite\{label\}''.
+
+{\color{new_green} \scriptsize
+\begin{verbatim}
+Según \cite{Noether1918}, a cada simetría continua de un sistema
+físico le corresponde una constante de movimiento, y viceversa.
+\end{verbatim}
+}
+
+Como etiqueta podemos utilizar lo que deseemos, aunque por lo general se utiliza el apellido del primer autor acompañado por el año de publicación.
+
+\end{frame}
+
+
+\section{\BibTeX{}}
+
+
+\begin{frame}[fragile]{\BibTeX{}}
+La otra opción para incluir bibliografías es hacerlo a través de \BibTeX{}.
+
+\BibTeX{} nos permite construir bases de datos de referencias bibliográficas que son almacenadas en archivos ``.bib''.
+
+Veamos un ejemplo de la entrada de un artículo en un .bib:
+
+{\color{new_green} \scriptsize
+\begin{verbatim}
+@article{greenwade93,
+    author  = "George D. Greenwade",
+    title   = "The {C}omprehensive {T}ex {A}rchive {N}etwork ({CTAN})",
+    year    = "1993",
+    journal = "TUGBoat",
+    volume  = "14",
+    number  = "3",
+    pages   = "342--351"
+}
+\end{verbatim}
+}
+\end{frame}
+
+
+\begin{frame}{\BibTeX{} - JabRef}
+Por suerte, existen herramientas gráficas que nos facilitan la tarea de construir estas bases de datos, incorporando herramientas útiles como búsquedas online.
+
+Una de ellas es JabRef.
+
+\end{frame}
+
+
+\begin{frame}[fragile]{\BibTeX{} - Inserción en Documento}
+Podemos insertar la base de datos .bib muy sencillamente en nuestro documento. Para ello agregamos lo siguiente en el lugar donde queremos posicionar la Bibliografía:
+
+{\color{new_green} \scriptsize
+\begin{verbatim}
+\bibliographystyle{plain}
+\bibliography{base-de-datos.bib}
+\end{verbatim}
+}
+
+En la primer línea establecemos el formato con el cual se generará la bibliografía, mientras que en la segunda importamos el archivo .bib.
+\end{frame}
+
+\begin{frame}[fragile]{\BibTeX{} - Citas}
+Al igual que con la bibliografía simple, podemos citar entradas de la siguiente manera:
+
+{\color{new_green} \scriptsize
+\begin{verbatim}
+\cite{Apellido2017}
+\end{verbatim}
+}
+
+A diferencia de la bibliografía simple, en la lista de fuentes bibliográficas generadas con \BibTeX{} solo aparecerán aquellas que son citadas en el texto. Si deseamos incluir alguna entrada que no citamos, lo podemos hacer de la siguiente manera:
+
+{\color{new_green} \scriptsize
+\begin{verbatim}
+\nocite{Apellido2005}
+\end{verbatim}
+}
+
+O bien, si queremos incluir toda la base de datos:
+
+{\color{new_green} \scriptsize
+\begin{verbatim}
+\nocite{*}
+\end{verbatim}
+}
+\end{frame}
+
+
+\begin{frame}[fragile]{\BibTeX{} - Estilos de Bibliografía}
+
+Existen varios estilos de bibliografía:
+
+\begin{columns}
+\column{0.25\textwidth}
+\begin{itemize}
+\item plain
+\item apalike
+\end{itemize}
+\column{0.25\textwidth}
+\begin{itemize}
+\item abbrv
+\item acm
+\end{itemize}
+\column{0.25\textwidth}
+\begin{itemize}
+\item alpha
+\item ieeetr
+\end{itemize}
+\column{0.25\textwidth}
+\begin{itemize}
+\item siam
+\item unsrt
+\end{itemize}
+\end{columns}
+
+\vspace{2em}
+
+{\footnotesize \url{https://www.sharelatex.com/learn/Bibtex_bibliography_styles}}
+
+\end{frame}
+
+
+\begin{frame}[fragile]{\BibTeX{} - Natbib}
+Cuando utilizamos \BibTeX{} es muy recomendable importar el paquete ``natbib''.
+
+{\color{new_green} \scriptsize
+\begin{verbatim}
+\usepackage{natbib}
+\end{verbatim}
+}
+
+Natbib modifica el esquema de citas. En vez de introducir la cita entre corchetes, lo hace limpiamente o entre paréntesis. Además incorpora características estéticas, como por ejemplo abreviar con et.al. los nombres en publicaciones con más de dos autores.
+
+El comando ``\textbackslash cite{}'' se divide en dos nuevos comandos:
+{\color{new_green} \scriptsize
+\begin{verbatim}
+\citet{} % para citas en linea
+\citep{} % para citas entre paréntesis
+\end{verbatim}
+}
+
+\end{frame}
+
+
+\begin{frame}[fragile]{\BibTeX{} - Natbib}
+
+{\footnotesize
+\begin{tabular}{l | l}
+\textbf{Citation command} 	& \textbf{Output} \\ \hline
+\textbackslash citet\{goossens93\}       & Goossens et al. (1993)                    \\
+\textbackslash citep\{goossens93\}       & (Goossens et al., 1993)                   \\ \hline
+\textbackslash citet*\{goossens93\}      & Goossens, Mittlebach, and Samarin (1993)  \\
+\textbackslash citep*\{goossens93\}      & (Goossens, Mittlebach, and Samarin, 1993) \\ \hline
+\textbackslash citeauthor\{goossens93\}  & Goossens et al.                           \\
+\textbackslash citeauthor*\{goossens93\} & Goossens, Mittlebach, and Samarin         \\ \hline
+\textbackslash citeyear\{goossens93\}    & 1993                                      \\
+\textbackslash citeyearpar\{goossens93\} & (1993)                                    \\ \hline
+\textbackslash citealt\{goossens93\}     & Goossens et al. 1993                      \\
+\textbackslash citealp\{goossens93\}     & Goossens et al., 1993                     \\
+\end{tabular}
+}
+
+\vspace{1em}
+
+{\small Podemos agrupar citas entre paréntesis:}
+\vspace{-1em}
+
+{\color{new_green} \scriptsize
+\begin{verbatim}
+\citep{AutorA1998, AutorB2003, AutorC2005}
+\end{verbatim}
+}
+
+{\small Y podemos agregar textos dentro de los paréntesis:}
+\vspace{-1em}
+
+{\color{new_green} \scriptsize
+\begin{verbatim}
+\citep[e.g.][otros]{AutorA1998, AutorB2003, AutorC2005}
+\end{verbatim}
+}
+
+\end{frame}
+
+\end{document}

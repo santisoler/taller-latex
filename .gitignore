@@ -4,6 +4,8 @@
 ## Main PDF file
 carta-presentacion-curso.pdf
 */beamer-clase*.pdf
+*/bibliography_example.pdf
+*/bibtex_example.pdf
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
