@@ -305,5 +305,102 @@ Al igual que con las ecuaciones, utilizamos una etiqueta en particular para las 
   son muy usadas por las personas que usan \LaTeX.
 \end{frame}
 
+\begin{frame}[fragile]{Artículo Científicos - Listas}
+En artículos científicos se suelen utilizar listas o enumeraciones. Para ello \LaTeX{} ofrece entornos que cumplen esas funciones:
+
+\begin{itemize}
+\item itemize: para listas con elementos no numerados (bullets)
+\item enumerate: para elementos numerados
+\item description: para listas descriptivas
+\end{itemize}
+
+Ejemplos:
+
+\begin{columns}
+\column{0.4\textwidth}
+{\color{new_green} \scriptsize
+\begin{verbatim}
+\begin{itemize}
+\item Primer elemento
+\item Segundo elemento
+\end{itemize}
+\end{verbatim}
+}
+\column{0.6\textwidth}
+\begin{itemize}
+\item Primer elemento
+\item Segundo elemento
+\end{itemize}
+
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Artículo Científicos - Listas}
+
+\begin{columns}
+\column{0.4\textwidth}
+{\color{new_green} \scriptsize
+\begin{verbatim}
+\begin{enumerate}
+\item Primer elemento
+\item Segundo elemento
+\end{enumerate}
+\end{verbatim}
+}
+\column{0.6\textwidth}
+\begin{enumerate}
+\item Primer elemento
+\item Segundo elemento
+\end{enumerate}
+\end{columns}
+
+\begin{columns}
+\column{0.4\textwidth}
+{\color{new_green} \scriptsize
+\begin{verbatim}
+\begin{description}
+\item [Hormiga] Es un insecto
+\item [Elefante] Es un mamífero
+\end{description}
+\end{verbatim}
+}
+\column{0.6\textwidth}
+\begin{description}
+\item [Hormiga] Es un insecto
+\item [Elefante] Es un mamífero
+\end{description}
+\end{columns}
+
+\vspace{0.5em}
+{\small También se pueden anidar listas. Por ejemplo:}
+
+\vspace{-1em}
+
+\begin{columns}
+\column{0.4\textwidth}
+{\color{new_green} \scriptsize
+\begin{verbatim}
+\begin{enumerate}
+\item Primer elemento
+   \begin{enumerate}
+   \item Primera porción
+   \item Segunda porción
+   \end{enumerate}
+\item Segundo elemento
+\end{enumerate}
+\end{verbatim}
+}
+\column{0.6\textwidth}
+\begin{enumerate}
+\item Primer elemento
+   \begin{enumerate}
+   \item Primera porción
+   \item Segunda porción
+   \end{enumerate}
+\item Segundo elemento
+\end{enumerate}
+\end{columns}
+\end{frame}
+
 
 \end{document}
