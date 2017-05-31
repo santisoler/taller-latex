@@ -56,6 +56,7 @@ Escribinos a santiago.r.soler@gmail.com y pesce.agustina@gmail.com
 ## Referencias y Recursos
 
 * [The No So Short Introduction to LaTeX](http://ftp.inf.utfsm.cl/pub/tex-archive/info/lshort/english/lshort.pdf)
+* [Introducción a LaTeX. Carlos M. Silva (2009)](https://github.com/santis19/taller-latex/raw/master/documentos/Silva2009.pdf)
 * [Wikibook de LaTeX](https://en.wikibooks.org/wiki/LaTeX)
 * The LaTeX Companion: Libro muy completo. [Aquí](http://ptgmedia.pearsoncmg.com/images/9780201362992/samplepages/0201362996.pdf) se puede leer un capítulo de muestra.
 * [OverLeaf](https://www.overleaf.com/): Plataforma online para escribir en colaboración
@@ -68,3 +69,4 @@ Los templates, documentos, códigos y todo el material restante presente en este
 
 ![CreativeCommons](https://licensebuttons.net/l/by-sa/4.0/88x31.png)
 
+A excepción de [documentos/Silva2009](https://github.com/santis19/taller-latex/raw/master/documentos/Silva2009.pdf), Copyright (c) 2009 Carlos M. Silva. Todos los derechos reservados.
