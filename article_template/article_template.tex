@@ -21,6 +21,8 @@
 
 \begin{document}
 
+\renewcommand{\tablename}{Tabla} % Cambia el nombre de las tables en epígrafes: de Cuadro a Tabla
+
 \maketitle
 
 \begin{abstract}
@@ -92,7 +94,7 @@ Para agregar una tabla debo usar 2 entornos: \textbf{table} y \textbf{tabular}. 
   \hline
  \end{tabular}
  \caption{Mi primera tabla.}
- \label{tabla1}
+ \label{tab:tabla1}
 \end{table}
 Hay que tener en cuenta algunos parametros para poder realizar una tabla:
 
@@ -109,10 +111,10 @@ Hay que tener en cuenta algunos parametros para poder realizar una tabla:
        &                                 &   &                       & $\|$                    & Linea vertical entre columnas \\ \hline
  \end{tabular}
  }
- \label{tabla2}
+ \label{tab:tabla2}
 \end{table}
 
-En la Tabla. \ref{tabla1} estan detallado algunos parametros que hay que tener en cuenta a la hora de hacer una tabla, donde: i) \textit{Posición} es el lugar donde va a estar la tabla en la página. ii) \textit{Aspecto} defino el tipo de justificado que tendrá el contenido de las celdas; iii) \textit{Otros} son caracteres que me permiten separar las columnas y filas.
+En la Tabla. \ref{tab:tabla1} estan detallado algunos parametros que hay que tener en cuenta a la hora de hacer una tabla, donde: i) \textit{Posición} es el lugar donde va a estar la tabla en la página. ii) \textit{Aspecto} defino el tipo de justificado que tendrá el contenido de las celdas; iii) \textit{Otros} son caracteres que me permiten separar las columnas y filas.
 
 \section{Resultados}
 Para realizar una cita bibliografica primero hay que tener un estilo y cargar el archivo \textsc{Bib}\TeX{}. Por lo tanto para realizar una cita entre \citet{Blakely1996} o entre parentesis \citep{Blakely1996}.
