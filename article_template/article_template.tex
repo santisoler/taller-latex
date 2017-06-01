@@ -1,5 +1,5 @@
-\documentclass[a4paper,12pt]{article}
-%\documentclass[a4paper,11pt,twoside,twocoulumn]{article}
+\documentclass[a4paper,12pt]{article} % Declaración del tipo de documento, papel y tamaño de letra
+%\documentclass[a4paper,11pt,twoside,twocoulumn]{article}   
 \usepackage[spanish]{babel} % diccionario que utilizará el documento, permite acentos y ñ
 %\usepackage[english]{babel} % usando inglés, los acentos y ñ se colocan: \'e \~n
 \usepackage[utf8]{inputenc} % codificación del texto fuente
@@ -13,7 +13,7 @@
 \usepackage{natbib} % paquete necesario para incluir bibliografía
 
 
-\title{Template de un Artículo Científico}
+% \title{Template de un Artículo Científico}
 \title{{\bf Template de un Artículo Científico}} % el \bf permite poner el texto en negrita
 \author{Isaac Newton}
 \date{\today}
@@ -36,11 +36,9 @@ Si no dejamos una línea entre medio, las oraciones pertenecen al mismo párrafo
 En cambio, si dejamos una línea en blanco entre esta y la anterior, {\LaTeX} crea un nuevo párrafo.
 
 \subsection{Teoría del Primer Tema}
-
 Este párrafo esta dentro de una subsección. Observese el orden numérico que utiliza {\LaTeX}.
 
 \subsection{Teoría del Segundo Tema}
-
 Así es como podemos escribir una ecuación sencilla dentro de una párrafo $E=mc^2$, o bien podemos crear una nueva línea exclusiva para la ecuación:
 
 $$\sum_{n=0}^\infty ar^n = \frac{a}{1-r}$$
@@ -57,17 +55,15 @@ Es el compilador quien se encarga de asignar los números correspondientes a cad
 Esta es una de las grandes ventajas que posee {\LaTeX} por sobre otros editores WYSIWYG. Las referencias de ecuaciones, figuras, tablas, páginas, secciones, bibliografía e incluso los Índices se generan de manera automática y en orden de aparición.
 
 \section{Métodos}
-
 Es muy probable que a la hora de escribir un artículo científico sea necesario incluir imágenes. Para ello haremos uso de un entorno llamado ``figure''.
 
-\begin{figure}[t]
-\centering
+\begin{figure}[t] % Entre corchetes coloco en que posicion aparecerá la imagne en la página. 
+\centering % Centro la figura en la página.
 \includegraphics[width=0.5\textwidth]{figs/latex.jpg}
-% Aquí cargamos la imagen. width especifica el ancho que ocupará. Entre llaves colocamos la dirección del archivo que queremos incluir en nuestro documento. Se suele recomendar colocar nuestras imágenes en una carpeta para mantener ordenado el directorio de trabajo.
+% Aquí cargamos la imagen. width especifica el ancho que ocupará la imagne respeco del texto. Entre llaves colocamos la dirección del archivo que queremos incluir en nuestro documento. Se suele recomendar colocar nuestras imágenes en una carpeta para mantener ordenado el directorio de trabajo.
 \caption{Este es el epígrafe de la figura, detalla qué se puede apreciar en la misma.}
 \label{fig:latex} % esta es la etiqueta que representará a esta figura en caso de querer referenciarla
 \end{figure}
-
 
 La letra que acompaña la apertura del entorno dictamina en qué posición de la página se colocará la misma. El compilador de {\LaTeX} intentará ubicar la figura de manera tal que no queden espacios sin ocupar al final de una página, líneas sueltas o títulos de secciones al final de la página sin el texto correspondiente. Es decir, tratando de optimizar la estética del documento.
 
@@ -79,11 +75,47 @@ La letra que acompaña la apertura del entorno dictamina en qué posición de la
 \item{!: Sobrescribe los parámetros predefinidos y obliga a ubicarla donde se pide}
 \end{itemize}
 
-Al igual que con la ecuación, podemos referenciar a la Figura \ref{fig:latex}.
+Para agregar una tabla debo usar 2 entornos: \textbf{table} y \textbf{tabular}. El entorno tabular nos permite realizar una tabla pero no se le puede colocar una etiqueta o un epígrafe. Encambio si la utilizamos dentro del entorno del table podemos agregar estas 2 opsiones. Tambien se puede utilizar el asistente que tiene el programa para facilitar la incersión de la tabla.
 
+\begin{table}[h] % Entre corchetes coloco en que posicion aparecerá la imagne en la página. 
+ \centering % Centro la figura en la página.
+ \begin{tabular}{ll|r} % declaro la geometria de la tabla diciendo cuantas colimnas van a tener y si van a estar separadas por una linea.
+  \hline
+  \multicolumn{2}{c|}{Item} \\
+  \cline{1-2}
+  Animal    & Description & Price (\$) \\
+  \hline
+  Gnat      & per gram    & 13.65      \\
+            & each        & 0.01       \\
+  Gnu       & stuffed     & 92.50      \\
+  Emu       & stuffed     & 33.33      \\
+  \hline
+ \end{tabular}
+ \caption{Mi primera tabla.}
+ \label{tabla1}
+\end{table}
+Hay que tener en cuenta algunos parametros para poder realizar una tabla:
 
+\begin{table}[h] % Entre corchetes defino la posicion de la tabla en la pagina.
+ \centering
+ {\scriptsize % Cambie el tamano de letra
+ \begin{tabular}{||c|l|c|l|c|l||} % Entre llaves declaro la geometria de la tabla diciendo cuantas columnas van a tener y si van a estar separadas por una linea y el justificado.
+  \hline
+  \multicolumn{2}{||c|}{Posición} & \multicolumn{2}{c|}{Aspecto} & \multicolumn{2}{c||}{Otros} \\ \hline
+  h    & Acá 		                 & l & Justificado izquierdo & $\&$                    & Separador de columnas \\ \hline
+  t    & Arriba en la página             & c & Centrado              & $\backslash \backslash$ &  Nueva fila \\ \hline
+  b    & Abajo en la página              & r & Justificado derecho   & $\backslash$hline       & Linea horizontal entre lineas \\ \hline
+  p    & Nueva página        		 &   &                       & |                       & Linea vertical entre columnas \\ \hline
+       &                                 &   &                       & $\|$                    & Linea vertical entre columnas \\ \hline
+ \end{tabular}
+ }
+ \label{tabla2}
+\end{table}
+
+En la Tabla. \ref{tabla1} estan detallado algunos parametros que hay que tener en cuenta a la hora de hacer una tabla, donde: i) \textit{Posición} es el lugar donde va a estar la tabla en la página. ii) \textit{Aspecto} defino el tipo de justificado que tendrá el contenido de las celdas; iii) \textit{Otros} son caracteres que me permiten separar las columnas y filas.
 
 \section{Resultados}
+Para realizar una cita bibliografica primero hay que tener un estilo y cargar el archivo \textsc{Bib}\TeX{}. Por lo tanto para realizar una cita entre \citet{Blakely1996} o entre parentesis \citep{Blakely1996}.
 
 \section{Conclusiones}
 
@@ -95,7 +127,8 @@ Al igual que con la ecuación, podemos referenciar a la Figura \ref{fig:latex}.
 \tableofcontents{}
 
 
-%~ \bibliographystyle{apalike}
-%~ \bibliography{bibliography}
+\bibliographystyle{apalike} % Defino el estilo de la bibliografía. Hay varios estilos que se pueden elegir, para ello Googlee
+\bibliography{bibliografia} % Coloco el nombre del archivo .bib que contiene la informacion bibliografica
 %~ \addcontentsline{toc}{part}{References}
 \end{document}
+\grid
