@@ -59,6 +59,7 @@ Escribinos a santiago.r.soler@gmail.com y pesce.agustina@gmail.com
 * [Introducción a LaTeX. Carlos M. Silva (2009)](https://github.com/santis19/taller-latex/raw/master/documentos/Silva2009.pdf)
 * [Wikibook de LaTeX](https://en.wikibooks.org/wiki/LaTeX)
 * The LaTeX Companion: Libro muy completo. [Aquí](http://ptgmedia.pearsoncmg.com/images/9780201362992/samplepages/0201362996.pdf) se puede leer un capítulo de muestra.
+* [Writing a Thesis with LaTeX](https://tug.org/pracjourn/2008-1/mori/mori.pdf)
 * [OverLeaf](https://www.overleaf.com/): Plataforma online para escribir en colaboración
 * [SciWeavers](http://www.sciweavers.org/free-online-latex-equation-editor) y [CodeCogs](http://www.codecogs.com/latex/eqneditor.php): editores de ecuaciones online
 

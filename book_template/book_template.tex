@@ -1,0 +1,32 @@
+\documentclass[11pt,a4paper,twoside,openright]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[left=3cm,right=2cm,top=3cm,bottom=3cm]{geometry}
+\author{Autor}
+\title{Título del Libro}
+
+\begin{document}
+\frontmatter
+
+\maketitle
+
+\tableofcontents{}
+
+\chapter{Epílogo}
+
+
+\mainmatter
+\input{introduccion/introduccion.tex}
+
+\input{metodos/metodos.tex}
+
+\input{conclusiones/conclusiones.tex}
+
+\appendix
+\chapter{Desarrollos Matemáticos}
+
+\backmatter
+
+\input{agradecimientos/agradecimientos.tex}
+
+\end{document}
