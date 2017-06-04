@@ -211,7 +211,7 @@ Hola Mundo
 \end{enumerate}
 \end{frame}
 
-\section{Documento Sencillo de \LaTeX{}}
+\section{Estructura y Sintaxis de Documentos \LaTeX{}}
 
 \begin{frame}[fragile]{Estructura básica de un documento \LaTeX}
 
@@ -256,6 +256,7 @@ Los párrafos deben ser separados por una línea en blanco.
 
 \begin{columns}
 \column{0.5\textwidth}
+{\color{new_green}
 \begin{Verbatim}[fontsize=\footnotesize]
    No importa si ponemos muchos 
 espacios      entre palabras.
@@ -264,6 +265,7 @@ La línea en blanco indica que
 terminó el párrafo anterior y 
 comienza uno nuevo.
 \end{Verbatim}
+}
 \column{0.5\textwidth}
    No importa si ponemos muchos 
 espacios      entre palabras.
@@ -336,7 +338,9 @@ comentario % comentario
 
 \end{frame}
 
-\begin{frame}[fragile]{Comandos \LaTeX}
+\section{Comandos y Paquetes}
+
+\begin{frame}[fragile]{Comandos}
 \metroset{block=fill}
 \begin{block}{Comandos \LaTeX}
 Los comandos de \LaTeX{} comienzan con una barra invertida: \textbackslash
@@ -370,6 +374,77 @@ Otros comandos \LaTeX{} más complejos tienen la siguiente sintaxis:
 \comando[opciones]{parámetro}
 \end{verbatim}
 \end{block}
+\end{frame}
+
+
+\begin{frame}[fragile]{Comandos}
+
+Otro ejemplo de comandos en \LaTeX{} es \textbf{pagestyle}. Este comando nos permite modificar la aparición de la numeración de página en encabezado o pie de página.
+El siguiente comando elimina la numeración de todas las páginas:
+{\color{new_green}
+\begin{verbatim}
+\pagestyle{empty}
+\end{verbatim}
+}
+
+
+Si en cambio, deseamos eliminar la numeración de una página en particular podemos utilizar:
+{\color{new_green}
+\begin{verbatim}
+\thispagestyle{empty}
+\end{verbatim}
+}
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Comandos}
+
+Otros parámetros para el comando pagestyle pueden ser:
+
+{\small
+\begin{description}
+\item [plain] Los números se sitúan en el pie de página. Es el estilo predeterminado.
+\item [headings] La numeración se sitúa en el encabezado, junto con el nombre de la sección.
+\item [empty] Produce páginas sin numeración.
+\end{description}
+}
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Paquetes}
+
+Muchas veces nos encontraremos que \LaTeX{} no puede resolver nuestro problemas por sí solo. En esos casos es necesario incluir ``mejoras'' a nuestro documento, y eso lo hacemos a través del uso de \textbf{paquetes}.
+
+En caso de querer usar un paquete en particular, tenemos que agregar una línea como la siguiente en el preámbulo:
+
+{\color{new_green}
+\begin{verbatim}
+\usepackage[options]{package-name}
+\end{verbatim}
+}
+
+\end{frame}
+
+\begin{frame}[fragile]{Paquetes}
+
+Por ejemplo, si queremos modificar la geometría de nuestra hoja cambiando el ancho de los márgenes, necesitamos utilizar el paquete \textbf{geometry} junto con las medidas de los márgenes como opciones.
+
+{\color{new_green} \small
+\begin{verbatim}
+\usepackage[hmargin=2.5cm,vmargin=2.5cm]{geometry}
+\end{verbatim}
+}
+
+También podemos modificar los márgenes individualmente:
+
+{\color{new_green} \small
+\begin{verbatim}
+\usepackage[left=3cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
+\end{verbatim}
+}
+
 \end{frame}
 
 
@@ -433,6 +508,5 @@ Uno de los entornos que utilizaremos es el ``equation''. Nos permite numerar la 
 \end{equation}
 \end{frame}
 
-\section{Trabajo Práctico}
 
 \end{document}
