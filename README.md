@@ -45,7 +45,7 @@ sudo apt-get install jabref
 
 Vamos a instalar una distribución de LaTeX (MikTex), el editor (TexMaker) y el gestor de referencias (JabRef):
 
-* [MikTex](https://miktex.org/download)
+* [MikTex](https://miktex.org/download) - Descargar el Basic Installer en la arquitectura de tu compu (32 o 64bits)
 * [TexMaker](http://www.xm1math.net/texmaker/download.html)
 * [JabRef](http://www.jabref.org/#downloads)
 
