@@ -53,11 +53,14 @@ Vamos a instalar una distribución de LaTeX (MikTex), el editor (TexMaker) y el 
 
 Escribinos a santiago.r.soler@gmail.com y pesce.agustina@gmail.com
 
-## Presentaciones de las Clases
+
+## Recursos y Referencias
+
+### Presentaciones de las Clases
 
 * [Clase 1: Introducción](https://github.com/santis19/taller-latex/raw/master/beamer-clase1/beamer-clase1.pdf)
 
-## Referencias y Recursos
+### Otros Recursos 
 
 * [The No So Short Introduction to LaTeX](http://ftp.inf.utfsm.cl/pub/tex-archive/info/lshort/english/lshort.pdf)
 * [Introducción a LaTeX. Carlos M. Silva (2009)](https://github.com/santis19/taller-latex/raw/master/documentos/Silva2009.pdf)
