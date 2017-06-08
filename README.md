@@ -41,6 +41,8 @@ Vamos a instalar JabRef, un gestor de referencias y bibliografía:
 sudo apt-get install jabref
 ```
 
+Obervación: Estas instrucciones también sirven para Huayra, la distribución de GNU/Linux que viene instalada en las netbooks de Conectar Igualdad.
+
 ### Windows
 
 Vamos a instalar una distribución de LaTeX (MikTex), el editor (TexMaker) y el gestor de referencias (JabRef):
