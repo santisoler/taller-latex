@@ -62,6 +62,11 @@ Escribinos a santiago.r.soler@gmail.com y pesce.agustina@gmail.com
 
 * [Clase 1: Introducción](https://github.com/santis19/taller-latex/raw/master/beamer-clase1/beamer-clase1.pdf)
 
+### Respuestas a dudas en las Clases
+
+En [este documento](https://github.com/santis19/taller-latex/raw/master/respuestas-dudas/respuestas-dudas.pdf) vamos a responder a algunas dudas que surjan en la clase.
+
+
 ### Otros Recursos 
 
 * [The No So Short Introduction to LaTeX](http://ftp.inf.utfsm.cl/pub/tex-archive/info/lshort/english/lshort.pdf)
