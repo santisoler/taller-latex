@@ -41,7 +41,7 @@ Vamos a instalar JabRef, un gestor de referencias y bibliografía:
 sudo apt-get install jabref
 ```
 
-Obervación: Estas instrucciones también sirven para Huayra, la distribución de GNU/Linux que viene instalada en las netbooks de Conectar Igualdad.
+**Observación**: Estas instrucciones también sirven para Huayra, la distribución de GNU/Linux que viene instalada en las netbooks de Conectar Igualdad.
 
 ### Windows
 
