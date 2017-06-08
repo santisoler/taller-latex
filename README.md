@@ -65,9 +65,7 @@ Escribinos a santiago.r.soler@gmail.com y pesce.agustina@gmail.com
 ### Respuestas a dudas en las Clases
 
 * En [este documento](https://github.com/santis19/taller-latex/raw/master/respuestas-dudas/respuestas-dudas.pdf) vamos a responder a algunas dudas que surjan en la clase.
-
 * Cómo cambiar la fuente de todo el documento: vean [este ejemplo](https://github.com/santis19/taller-latex/raw/master/fonts/fonts.tex).
-
 * Tablas apaisadas: [leer esto](https://tex.stackexchange.com/questions/3930/how-to-rotate-landscape-table-page-in-pdf#123330).
 
 ### Otros Recursos 
