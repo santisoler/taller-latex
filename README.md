@@ -68,6 +68,8 @@ Escribinos a santiago.r.soler@gmail.com y pesce.agustina@gmail.com
 
 * Cómo cambiar la fuente de todo el documento: vean [este ejemplo](https://github.com/santis19/taller-latex/raw/master/fonts/fonts.tex).
 
+* Tablas apaisadas: [leer esto](https://tex.stackexchange.com/questions/3930/how-to-rotate-landscape-table-page-in-pdf#123330).
+
 ### Otros Recursos 
 
 * [The No So Short Introduction to LaTeX](http://ftp.inf.utfsm.cl/pub/tex-archive/info/lshort/english/lshort.pdf)
