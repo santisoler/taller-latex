@@ -3,6 +3,20 @@
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{fancyvrb}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{color}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+ 
+\urlstyle{same}
+
+
 \definecolor{new_green}{HTML}{347F1F}
 
 
@@ -96,6 +110,8 @@
   \item Insertar tablas
   \item Hacer referencias cruzadas
   \item Notas de pié de página
+  \item Listas
+  \item Extras
  \end{itemize}
 \end{frame}
 
@@ -130,10 +146,12 @@
   \end{pmatrix}
   \label{Nombre para la referencia curzada.} 
   }
- \end{equation}
+  \end{equation}
+  
+ \url{https://en.wikibooks.org/wiki/LaTeX/Mathematics}
 \end{frame}
 
-\begin{frame}[fragile]{Artículo Científico - Referencias Cruzadas}
+\begin{frame}[fragile]{Artículo Científico - Referencias Cruzadas} \label{pag.ec}
 Con \LaTeX{}, podemos hacer fácilmente referencias a figuras, tablas y ecuaciones de nuestro documento.
 El mecanismo es muy fácil:
 $\backslash label \{ X \}$ - Con este comando se etiqueta el objeto. \\
@@ -161,6 +179,7 @@ La etiqueta puede ser elegida libremente sin ningún criterio, aunque es recomen
 \label{eq:lagrange}
 \end{equation}
 \end{columns}
+
 
 \end{frame}
 
@@ -225,7 +244,7 @@ Al igual que con las ecuaciones, utilizamos una etiqueta en particular para las 
 \begin{frame}{Artículo Científico - Figuras}
 Práctica:
 \begin{itemize}
-\item Eligamos una figura a elección propia,
+\item Elijamos una figura a elección propia,
 \item Creemos un nuevo artículo científico,
 \item Creemos una carpeta llamada figs dentro del directorio del proyecto,
 \item Insertemos la figura en el documento,
@@ -282,6 +301,7 @@ Práctica:
      Emu       & stuffed     & 33.33      \\
      \hline
     \end{tabular}
+   \caption{Epígrafe.}
    \label{tab:precios}
    \end{table}
   \end{Verbatim}
@@ -303,9 +323,19 @@ Práctica:
     \hline
    \end{tabular}
   \label{tab:precios}
+  \caption{Epígrafe.}
   \end{table}
+  \scriptsize{
+  Si quiero que diga ``Tabla'' en vez de ``Cuadro'' defino un comnado en el cuerpo del documento:
+ {\color{new_green}
+ \begin{Verbatim}
+    \renewcommand{\tablename}{Tabla} 
+  \end{Verbatim}
+  }
+  }
  \end{columns}
 \end{frame}
+
 
 \begin{frame}{Artículo Científico - Tablas}
 Práctica:
@@ -433,5 +463,127 @@ Práctica:
 \item Creemos varios tipos de listas.
 \end{itemize}
 \end{frame}
+
+
+\begin{frame}[fragile]{Artículo Científicos - Extras}
+\textbf{Interlineado}
+
+Se necesita agregar en el preámbulo el paquete:
+\textbackslash usepackage\{setspace\} 
+{\color{new_green} \scriptsize
+\begin{verbatim}
+\doublespacing    % Interlineado doble
+\onehalfspace     % Interlineado uno y medio
+\singlespace      % Interlineado simple
+\spacing{XXX}     % Interlineado a elección (sin unidad)
+\setstretch{XXX}  
+\end{verbatim}
+}
+(Se deben escribir en el cuerpo del documento)
+
+\textbf{Numeración de lineas}
+
+Se necesita agregar en el preámbulo el paquete:
+\textbackslash usepackage\{lineno\} 
+\begin{columns}
+\column{0.2\textwidth}
+{\color{new_green} \scriptsize
+\begin{verbatim}
+\modulolinenumbers[XXX]
+\linenumbers
+\end{verbatim}
+}
+
+\column{0.4\textwidth} \scriptsize{
+Al escribir estos dos comandos en el cuerpo del documento aparece la numeración cada XXX lineas
+}
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Artículo Científicos - Extras}
+\textbf{Símbolo de ``Grado''}
+
+Se necesita agregar en el preámbulo el paquete:
+\textbackslash usepackage\{textcomp\} o \textbackslash usepackage\{usepackage{gensymb\}
+
+\begin{columns}
+\column{0.4\textwidth}
+{\color{new_green} \scriptsize
+\begin{verbatim}
+The study area is located
+between 37{\textdegree} and
+39{\degree} S in the
+Southern Central Andes.
+\end{verbatim}
+}
+\column{0.4\textwidth} \scriptsize{
+The study area is located between 37{\textdegree} and 39{\degree} S in the Southern Central Andes.
+}
+\end{columns}
+
+\textbf{Texto en color}
+
+Se necesita agregar en el preámbulo el paquete:
+\textbackslash usepackage\{color\}
+\begin{columns}
+\column{0.4\textwidth}
+{\color{new_green} \scriptsize
+\begin{verbatim}
+The study area is located in 
+the \textcolor{red}{Southern
+Central Andes}.
+\end{verbatim}
+}
+\column{0.4\textwidth} \scriptsize{
+The study area is located in the \textcolor{red}{Southern Central Andes}.
+}
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Artículo Científicos - Extras}
+\textbf{Hipervínculos} 
+
+Se necesita agregar en el preámbulo el paquete:
+\textbackslash usepackage\{hyperref\}
+
+Entonces todos los elementos con referencias cruzadas se convierten en hipervínculos.
+{\color{new_green} \footnotesize
+\begin{verbatim}
+\hypersetup{         % Configura el comportamiento de los enlaces
+  colorlinks=true,   % Color de los enlaces
+  linkcolor=blue,    % Color de las referencias cruzadas
+  filecolor=magenta, % Color de los enlaces de archivos locales
+  urlcolor=cyan,     % Color de los enlaces de web sites
+  }
+\urlstyle{same}      % Los enlaces tendrán el estilo del documento
+\end{verbatim}
+}
+\end{frame}
+
+\begin{frame}[fragile]{Artículo Científicos - Extras}
+Ejemplo:
+{\color{new_green} \scriptsize
+\begin{verbatim}
+La matrix que que usamos es Ec.\ref{eq:lagrange} que se
+encuenta en la página \pageref{sixth}.
+
+Visiten la pagina wikibooks (\url{https://en.wikibooks.org/wiki/LaTeX})
+para más información o abran el archivo
+\href{run:../article_template/article_template.pdf}{article_template.pdf}
+\end{verbatim}
+}
+ \scriptsize{
+La matrix que que usamos es Ec.\ref{eq:lagrange} que se encuenta en la página \pageref{pag.ec}.
+
+Visiten la pagina wikibooks (\url{https://en.wikibooks.org/wiki/LaTeX}) para más información o abran el archivo \href{../article_template/article_template.pdf}{article\_template.pdf}.
+}
+
+
+
+\end{frame}
+
+
+
+
 
 \end{document}
