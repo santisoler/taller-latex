@@ -1,23 +1,28 @@
-\documentclass[a4paper,12pt]{article} % Declaración del tipo de documento, papel y tamaño de letra
-%\documentclass[a4paper,11pt,twoside,twocoulumn]{article}   
-\usepackage[spanish]{babel} % diccionario que utilizará el documento, permite acentos y ñ
-%\usepackage[english]{babel} % usando inglés, los acentos y ñ se colocan: \'e \~n
-\usepackage[utf8]{inputenc} % codificación del texto fuente
-\usepackage[T1]{fontenc} % codificación del pdf de salida
-\usepackage{lmodern} % latin modern fonts
-\usepackage[a4paper,hmargin=2.5cm, vmargin=2.5cm]{geometry} % geometría de la hoja del pdf
-\usepackage{graphicx} % paquete necesario para introducir imágenes
-%\usepackage{amsmath} % entornos adicionales para expresiones matemáticas
-%\usepackage{amssymb} % símbolos matemáticos adicionales
+\documentclass[a4paper,11pt,twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx} % paquete para incluir imagenes
+\usepackage{amsmath}  % paquetes AMS para expandir las capacidades matematicas
+\usepackage{amsfonts} % paquetes AMS para expandir las capacidades matematicas
+\usepackage{amssymb}  % paquetes AMS para expandir las capacidades matematicas
+\usepackage[hmargin=3cm, vmargin=3cm]{geometry} % geometría de la hoja del pdf
 \usepackage[bottom]{footmisc} % permite corregir posición de footnotes en caso de que haya figuras
 \usepackage{natbib} % paquete necesario para incluir bibliografía
+\usepackage{hyperref} % paquete para generar hipervinculos
+\hypersetup{
+    colorlinks=false,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links (change box color with linkbordercolor)
+    citecolor=green,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=cyan           % color of external links
+}
+\urlstyle{same}             % url will have the same font as the text
 
 
-% \title{Template de un Artículo Científico}
-\title{{\bf Template de un Artículo Científico}} % el \bf permite poner el texto en negrita
+\title{\textbf{Template de un Artículo Científico}} % el \textbf permite poner el texto en negrita
 \author{Isaac Newton}
-\date{\today}
-%\date{} % si no deseamos que aparezca la fecha dejamos en blanco el campo date
+\date{\today} % si no deseamos que aparezca la fecha dejamos en blanco el campo date
+
 
 \begin{document}
 
@@ -100,7 +105,7 @@ Hay que tener en cuenta algunos parametros para poder realizar una tabla:
 
 \begin{table}[h] % Entre corchetes defino la posicion de la tabla en la pagina.
  \centering
- {\scriptsize % Cambie el tamano de letra
+ {\small % Cambie el tamano de letra
  \begin{tabular}{||c|l|c|l|c|l||} % Entre llaves declaro la geometria de la tabla diciendo cuantas columnas van a tener y si van a estar separadas por una linea y el justificado.
   \hline
   \multicolumn{2}{||c|}{Posición} & \multicolumn{2}{c|}{Aspecto} & \multicolumn{2}{c||}{Otros} \\ \hline
@@ -122,12 +127,12 @@ Para realizar una cita bibliografica primero hay que tener un estilo y cargar el
 \section{Conclusiones}
 
 
-\newpage
+\newpage % crea un salto de página
 
 %Podemos crear automáticamente un Índice para nuestro documento en una sola línea, el cual se modificará si cambiamos el documento.
-
 \tableofcontents{}
 
+\newpage
 
 \bibliographystyle{apalike} % Defino el estilo de la bibliografía. Hay varios estilos que se pueden elegir, para ello Googlee
 \bibliography{bibliografia} % Coloco el nombre del archivo .bib que contiene la informacion bibliografica
