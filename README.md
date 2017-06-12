@@ -65,11 +65,14 @@ Escribinos a santiago.r.soler@gmail.com y pesce.agustina@gmail.com
 
 ### Respuestas a dudas en las Clases
 
+* [Ejemplos de cómo resolver algunas de las dudas que surgieron en clase](https://github.com/santis19/taller-latex/tree/master/examples)
 * En [este documento](https://github.com/santis19/taller-latex/raw/master/respuestas-dudas/respuestas-dudas.pdf) vamos a responder a algunas dudas que surjan en la clase.
 * Cómo cambiar la fuente de todo el documento: vean [este ejemplo](https://github.com/santis19/taller-latex/blob/master/examples/fonts/fonts.tex).
 * Tablas apaisadas: [leer esto](https://tex.stackexchange.com/questions/3930/how-to-rotate-landscape-table-page-in-pdf#123330).
 * Listas horizontales: Leer la respuesta de [este post](https://tex.stackexchange.com/questions/146306/how-to-make-horizontal-lists/324740#324740) que hace uso del paquete **tasks**.
-* [Ejemplos de cómo resolver algunas de las dudas que surgieron en clase](https://github.com/santis19/taller-latex/tree/master/examples)
+* Afiliaciones de autores en maketitle: [post](https://tex.stackexchange.com/questions/107739/authors-with-multiple-affiliations/370813#370813) y [ejemplo](https://github.com/santis19/taller-latex/blob/master/examples/affiliations/affiliations.tex)
+* Crear dos abstract: uno en español y otro en inglés. [Aquí](https://github.com/santis19/taller-latex/blob/master/examples/two_abstracts/two_abstracts.tex) hay un ejemplo.
+
 
 ### Otros Recursos 
 
