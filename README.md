@@ -68,6 +68,7 @@ Escribinos a santiago.r.soler@gmail.com y pesce.agustina@gmail.com
 * En [este documento](https://github.com/santis19/taller-latex/raw/master/respuestas-dudas/respuestas-dudas.pdf) vamos a responder a algunas dudas que surjan en la clase.
 * Cómo cambiar la fuente de todo el documento: vean [este ejemplo](https://github.com/santis19/taller-latex/blob/master/examples/fonts/fonts.tex).
 * Tablas apaisadas: [leer esto](https://tex.stackexchange.com/questions/3930/how-to-rotate-landscape-table-page-in-pdf#123330).
+* Listas horizontales: Leer la última respuesta de [este post](https://tex.stackexchange.com/questions/146306/how-to-make-horizontal-lists#146311), recomendamos el que hace uso del paquete **tasks**.
 * [Ejemplos de cómo resolver algunas de las dudas que surgieron en clase](https://github.com/santis19/taller-latex/tree/master/examples)
 
 ### Otros Recursos 
