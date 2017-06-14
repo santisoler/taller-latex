@@ -1,25 +1,34 @@
 \documentclass[11pt,a4paper,twoside,openright]{book}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
-\usepackage[left=3cm,right=2cm,top=3cm,bottom=3cm]{geometry}
+\usepackage[left=4cm,right=2cm,top=3cm,bottom=3cm]{geometry}
+\usepackage[nottoc,numbib]{tocbibind} % carga la bibliografia en tableofcontents
 \author{Autor}
 \title{Título del Libro}
 
 \begin{document}
 
-\input{tapa/tapa.tex}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\listtablename}{Índice de Tablas}
 
+\input{tapa/tapa.tex}
 
 \frontmatter
 
-
-\tableofcontents{}
+\tableofcontents
+\listoffigures
+\listoftables
 
 \chapter{Prefacio}
 
 
 \mainmatter
 \input{introduccion/introduccion.tex}
+
+\begin{figure}
+\caption{Ejemplo de figura}
+\label{fig:intro}
+\end{figure}
 
 \input{metodos/metodos.tex}
 
@@ -28,13 +37,28 @@
 \appendix
 \chapter{Desarrollos Matemáticos}
 
+\chapter{Tablas de datos}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{c | c}
+x & y \\ \hline
+1 & 1  \\
+2 & 4  \\
+3 & 9  \\
+4 & 16 \\
+5 & 25 \\
+6 & 36 \\
+\end{tabular}
+\caption{Datos}
+\end{table}
+
 \backmatter
 
 \input{agradecimientos/agradecimientos.tex}
 
-\addcontentsline{toc}{chapter}{Bibliografía} % agrega bibliografía a tableofcontents
+
 \begin{thebibliography}{3}
 \bibitem{Apellido2017} Apellido, N. (2017). Nombre del artículo, Revista.
 \end{thebibliography}
-
 \end{document}
