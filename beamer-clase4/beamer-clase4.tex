@@ -1,0 +1,333 @@
+\documentclass[11pt]{beamer}
+\usetheme[progressbar=frametitle]{metropolis}
+%\usetheme{Singapore}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{fancyvrb}
+\usepackage{hyperref}
+\definecolor{new_green}{HTML}{347F1F}
+
+
+\author{Lic. Agustina Pesce \\ Lic. Santiago Soler}
+\title[Taller de {\LaTeX}]{Taller Introductorio a {\LaTeX}: \\ Cómo producir documentos de Calidad}
+\subtitle{Cuarto Encuentro: Libro}
+%\setbeamercovered{transparent} 
+%\setbeamertemplate{navigation symbols}{} 
+%\logo{} 
+%\institute{} 
+\date{}
+%\subject{} 
+
+\newcommand{\BibTeX}{\textsc{Bib}\TeX{}}
+\newcounter{savedenum}
+\newcommand*{\saveenum}{\setcounter{savedenum}{\theenumi}}
+\newcommand*{\resume}{\setcounter{enumi}{\thesavedenum}}
+
+
+\begin{document}
+
+\maketitle
+
+
+\section{Libro}
+
+\begin{frame}[fragile]{Nueva Clase de Documento: Libro}
+Anteriormente hemos trabajado únicamente con documento article. Hoy veremos la clase \textbf{book} que es muy útil a la hora de escribir libros, tesis, textos largos, etc., es decir, cualquier documento que deseamos dividir en \emph{capítulos}.
+
+Para utilizar esta clase debemos modificar la primer línea:
+{\color{new_green}
+\begin{verbatim}
+\documentclass[11pt,a4paper]{book}
+\end{verbatim}
+}
+
+Algunas opciones que recomendamos utilizar a la hora de producir libros son:
+{\color{new_green}
+\begin{verbatim}
+\documentclass[11pt,a4paper,twoside,openright]{book}
+\end{verbatim}
+}
+\end{frame}
+
+
+\begin{frame}[fragile]{Nueva Clase de Documento: Libro}
+Con la opción \textbf{twoside} indicamos que nuestra intención es imprimir el documento final a doble faz. De esta manera nos permite correr los márgenes de forma tal que el encuadernado no incomode la lectura de las páginas a derecha e izquierda.
+
+Con la opción \textbf{openright} indicamos que los títulos de los capítulos aparecerán siempre en las páginas a derecha, dejando una página vacía, si es necesario, en la página izquierda.
+
+\metroset{block=fill}
+\begin{block}{}
+¡¡Cuando escribimos documentos largos que luego serán impresos pongamos el ahorro de papel dentro de nuestras prioridades!!
+\end{block}
+\end{frame}
+
+
+\section{Estructura de Libro}
+
+\begin{frame}{Estructura de Libro}
+\begin{columns}[t]
+\begin{column}{0.5\textwidth}
+  \begin{enumerate}
+    \item \textbf{Principio (frontmatter)}
+      \begin{itemize}
+        \item Tapa
+        \item Información, derechos de autor
+        \item Dedicación
+        \item Resumen
+        \item Agradecimientos
+        \item Tabla de contenidos
+        \item Tabla de símbolos y notación
+        \item Lista de figuras
+        \item Lista de tablas
+        \item Prefacio
+      \end{itemize}
+    \saveenum
+  \end{enumerate}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+  \begin{enumerate}
+    \resume
+    \item \textbf{Texto Principal (mainmatter)}
+      \begin{itemize}
+        \item Capítulos
+        \begin{itemize}
+          \item Secciones
+        \end{itemize}
+        \item Apéndices
+      \end{itemize}
+      
+    \item \textbf{Final (backmatter)}
+      \begin{itemize}
+        \item Bibliografía
+        \item Glosario
+      \end{itemize}
+  \end{enumerate}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}[fragile]{Estructura de Libro - Ejemplo}
+
+\begin{columns}[t]
+\begin{column}{0.4\textwidth}
+{\color{new_green} \small
+\begin{verbatim}
+\begin{document}
+
+\frontmatter
+\maketitle
+\chapter{Prefacio}
+
+\mainmatter
+\chapter{Primer Capítulo}
+
+\appendix
+\chapter{Primer Apéndice}
+\end{verbatim}
+}
+\end{column}
+
+\begin{column}{0.4\textwidth}
+{\color{new_green} \small
+\begin{verbatim}
+\backmatter
+\chapter{Ultimas notas}
+\end{document}
+\end{verbatim}
+}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}[fragile]{Estructura de Libro - Explicaciones}
+
+\vspace{-0.5em}
+{\color{red}
+\begin{verbatim}
+\frontmatter
+\end{verbatim}
+}
+\vspace{-1em}
+\begin{itemize}
+\item Capítulos no serán numerados
+\item La numeración de las páginas será en números romanos
+\item No se supone que estos capítulos tengan secciones
+\end{itemize}
+
+\vspace{-0.5em}
+{\color{red}
+\begin{verbatim}
+\mainmatter
+\end{verbatim}
+}
+\vspace{-1em}
+\begin{itemize}
+\item Capítulos serán numerados normalmente
+\item Podemos introducir secciones, que también serán numeradas
+\item La numeración de las páginas será en números arábicos
+\item Se resetea la numeración
+\end{itemize}
+
+\vspace{-0.5em}
+{\color{red}
+\begin{verbatim}
+\backmatter
+\end{verbatim}
+}
+\vspace{-1em}
+\begin{itemize}
+\item Los capítulos no se numeran (los apéndices sí)
+\item Se continua la numeración con números arábicos
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Estructura de Libro - Cuerpo}
+El cuerpo principal estará estructurado en capítulos, secciones y subsecciones:
+
+{\color{new_green}
+\begin{verbatim}
+\chapter{Introducción}
+\section{Primer Tema}
+\section{Segundo Tema}
+
+\chapter{Métodos Experimentales}
+\section{Primer Método}
+\subsection{Construcción de estructura fundamental}
+\end{verbatim}
+}
+\end{frame}
+
+
+\begin{frame}[fragile]{Estructura de Libro - Apéndices}
+Luego del cuerpo principal, podemos agregar apéndices en los cuales nos explayamos sobre temas que pueden resultar innecesarios de incluir en el cuerpo. Para hacerlo debemos utilizar el comando \textbackslash appendix.
+
+{\color{new_green}
+\begin{verbatim}
+\appendix
+\chapter{Desarrollos Matemáticos}
+
+\chapter{Tablas de datos}
+\end{verbatim}
+}
+
+Los apéndices serán numerados con letras (Apéndice A, Apéndice B, etc.).
+\end{frame}
+
+
+\begin{frame}[fragile]{Estructura de Libro - Backmatter}
+Finalmente, agregamos las últimas notas en backmatter en capítulos sin numerar, por ejemplo, la bibliografía
+
+{\color{new_green}
+\begin{verbatim}
+\backmatter
+\begin{thebibliography}{3}
+\bibitem{Apellido2017}
+  Apellido, N. (2017).
+  Nombre del artículo, Revista.
+\end{thebibliography}
+\end{verbatim}
+}
+\end{frame}
+
+
+\begin{frame}[fragile]{Tablas de Contenidos}
+En \LaTeX{} incluir una lista de contenidos (o índice) es muy sencillo. La misma se generará donde introduzcamos el siguiente comando:
+{\color{new_green}
+\begin{verbatim}
+\tableofcontents
+\end{verbatim}
+}
+
+Lo mismo sucede con listas de figuras o tablas:
+{\color{new_green}
+\begin{verbatim}
+\listoffigures
+\listoftables
+\end{verbatim}
+}
+
+Observación: si queremos incluir la bibliografía en el índice, debemos cargar el siguiente paquete en el preámbulo
+{\color{new_green}
+\begin{verbatim}
+\usepackage[nottoc,numbib]{tocbibind}
+\end{verbatim}
+}
+\end{frame}
+
+
+\section{Particionado de Texto}
+
+\begin{frame}[fragile]{Particionado de texto}
+Una de las ventajas de usar \LaTeX{} para la producción de textos largos es la posibilidad de dividir nuestro documento en múltiples archivos.
+Hacerlo es muy sencillo:
+\begin{itemize}
+\item Tendremos un archivo principal, por ejemplo: libro.tex
+\item Agreguemos un capítulo en un archivo nuevo: introduccion.tex
+\item En libro.tex cargamos el contenido de introduccion.tex con el comando \textbf{\textbackslash input}\{introduccion.tex\}
+\item El archivo que debemos compilar es el libro.tex. Los archivos adicionales serán cargados en la compilación.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Particionado de texto}
+
+\begin{columns}[t]
+\begin{column}{0.5\textwidth}
+\underline{\textbf{introduccion.tex}}
+\vspace{-0.75em}
+{\color{new_green} \small
+\begin{verbatim}
+\chapter{Introducción}
+
+Esta es la introducción de
+nuestro libro. Puedo agregar
+secciones, imágenes, tablas,
+etc.
+
+El comando input que usaremos
+en libro.tex lo que hace es 
+``incrustar'' en él lo que
+escribamos en este archivo.
+\end{verbatim}
+}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\underline{\textbf{libro.tex}}
+\vspace{-0.75em}
+{\color{new_green} \small
+\begin{verbatim}
+\documentclass[11pt,a4paper,
+               twoside,openright]
+               {book}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+\begin{document}
+\input{introduccion.tex}
+\end{document}
+\end{verbatim}
+}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}[fragile]{Particionado de texto}
+\textbf{Recomendaciones:}
+\vspace{-.5em}
+\begin{itemize}
+\item Los archivos adicionales deben ir \textbf{siempre} dentro de la carpeta del proyecto.
+\item Podemos optar por dejar estos archivos en la misma jerarquía que nuestro documento principal o bien crear carpetas para cada archivo adicional.
+\item Recomendamos que las divisiones del texto tengan algún criterio basado en la estructura del documento. Por ejemplo: genero un archivo adicional para cada capítulo.
+\end{itemize}
+\end{frame}
+
+
+
+\end{document}
