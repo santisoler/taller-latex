@@ -1,0 +1,102 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{braket}
+\usepackage{gensymb}
+\usepackage[hmargin=3cm, vmargin=3cm]{geometry}
+\usepackage{hyperref}
+\hypersetup{colorlinks,%
+            citecolor=black,%
+            filecolor=black,%
+            linkcolor=black,%
+            urlcolor=blue,%
+            pdftex}
+%\urlstyle{same}                 % hyperlinks
+
+\title{\textbf{Respuestas a dudas}}
+\date{}
+
+\usepackage{lipsum}
+
+
+\begin{document}
+
+\maketitle
+
+\section{Interlineado}
+
+Para configurar el interlineado en todo el documento es necesario usar el paquete \textbf{setspace} en el preámbulo:
+\begin{verbatim}
+\usepackage{setspace}
+\end{verbatim}
+
+Luego debemos configurar el ancho del interlineado. Para hacerlo de 1.5 debemos agregar la siguiente linea en el preámbulo:
+\begin{verbatim}
+\onehalfspacing
+\end{verbatim}
+
+O bien, si deseamos interlineado doble:
+\begin{verbatim}
+\doublespacing
+\end{verbatim}
+
+Para configurar un interlineado arbitrario, utilizamos por ejemplo:
+\begin{verbatim}
+\setstretch{1.2}
+\end{verbatim}
+
+
+Obtener más información en: \url{https://en.wikibooks.org/wiki/LaTeX/Text_Formatting} y \url{https://en.wikibooks.org/wiki/LaTeX/Paragraph_Formatting#Line_spacing}.
+
+
+\section{Numeración de lineas}
+
+Para mostrar los números de líneas es necesario usar el paquete \textbf{lineno}. Activamos la numeración con el comando \textbackslash linenumbers.
+
+\begin{verbatim}
+\usepackage{lineno}
+\linenumbers
+\end{verbatim}
+
+Más opciones en \url{http://texblog.org/2012/02/08/adding-line-numbers-to-documents/} y \url{http://texdoc.net/texmf-dist/doc/latex/lineno/ulineno.pdf}.
+
+\section{Notación de Dirac}
+
+Para utilizar la notación de Dirac dentro de los entornos matemáticos es necesario usar el paquete \textbf{brakets}. Insertamos bra, kets y brakets con los comandos \textbackslash Bra \textbackslash Ket y \textbackslash Braket.
+
+\begin{verbatim}
+\usepackage{brakets}
+\begin{equation}
+\Bra{r}\hat{H}\Ket{\varphi} = E\Braket{r | \varphi}
+\end{equation}
+\end{verbatim}
+
+\begin{equation}
+\Bra{r}\hat{H}\Ket{\varphi} =  E\Braket{r | \varphi}
+\end{equation}
+
+\section{Símbolos adicionales}
+
+\subsection{Símbolo de grado}
+
+Para utilizar el símbolo de grado necesitamos utilizar el paquete \textbf{gensymb} en el preámbulo:
+
+
+\begin{verbatim}
+\usepackage{gensymb}
+\end{verbatim}
+
+Y luego insertamos el símbolo en el cuerpo del texto con el comando \textbf{\textbackslash degree}. Por ejemplo:
+
+\begin{verbatim}
+Nuestra zona de estudio se encuentra entre los 30\degreeS y 34\degree S.
+En la misma, el gradiente geotérmico responde a un aumento de 30\degreeC
+cada 1km de profundidad.
+\end{verbatim}
+
+Nuestra zona de estudio se encuentra entre los 30\degree S y 34\degree S.
+En la misma, el gradiente geotérmico responde a un aumento de 30\degree C
+cada 1km de profundidad.
+
+
+\end{document}

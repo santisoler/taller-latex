@@ -41,11 +41,13 @@ Vamos a instalar JabRef, un gestor de referencias y bibliografía:
 sudo apt-get install jabref
 ```
 
+**Observación**: Estas instrucciones también sirven para Huayra, la distribución de GNU/Linux que viene instalada en las netbooks de Conectar Igualdad.
+
 ### Windows
 
 Vamos a instalar una distribución de LaTeX (MikTex), el editor (TexMaker) y el gestor de referencias (JabRef):
 
-* [MikTex](https://miktex.org/download)
+* [MikTex](https://miktex.org/download) - Descargar el Basic Installer en la arquitectura de tu compu (32 o 64bits)
 * [TexMaker](http://www.xm1math.net/texmaker/download.html)
 * [JabRef](http://www.jabref.org/#downloads)
 
@@ -53,7 +55,26 @@ Vamos a instalar una distribución de LaTeX (MikTex), el editor (TexMaker) y el 
 
 Escribinos a santiago.r.soler@gmail.com y pesce.agustina@gmail.com
 
-## Referencias y Recursos
+
+## Recursos y Referencias
+
+### Presentaciones de las Clases
+
+* [Clase 1: Introducción](https://github.com/santis19/taller-latex/raw/master/beamer-clase1/beamer-clase1.pdf)
+* [Clase 2: Artículo Científico](https://github.com/santis19/taller-latex/raw/master/beamer-clase2/beamer-clase2.pdf)
+
+### Respuestas a dudas en las Clases
+
+* [Ejemplos de cómo resolver algunas de las dudas que surgieron en clase](https://github.com/santis19/taller-latex/tree/master/examples)
+* Algunas respuestas a dudas que surgieron en clase: [aquí](https://github.com/santis19/taller-latex/raw/master/respuestas-dudas/respuestas-dudas.pdf)
+* Cómo cambiar la fuente de todo el documento: vean [este ejemplo](https://github.com/santis19/taller-latex/blob/master/examples/fonts/fonts.tex).
+* Tablas apaisadas: [leer esto](https://tex.stackexchange.com/questions/3930/how-to-rotate-landscape-table-page-in-pdf#123330).
+* Listas horizontales: Leer la respuesta de [este post](https://tex.stackexchange.com/questions/146306/how-to-make-horizontal-lists/324740#324740) que hace uso del paquete **tasks**.
+* Afiliaciones de autores en maketitle: [post](https://tex.stackexchange.com/questions/107739/authors-with-multiple-affiliations/370813#370813) y [ejemplo](https://github.com/santis19/taller-latex/blob/master/examples/affiliations/affiliations.tex)
+* Crear dos abstract: uno en español y otro en inglés. [Aquí](https://github.com/santis19/taller-latex/blob/master/examples/two_abstracts/two_abstracts.tex) hay un ejemplo.
+
+
+### Otros Recursos 
 
 * [The No So Short Introduction to LaTeX](http://ftp.inf.utfsm.cl/pub/tex-archive/info/lshort/english/lshort.pdf)
 * [Introducción a LaTeX. Carlos M. Silva (2009)](https://github.com/santis19/taller-latex/raw/master/documentos/Silva2009.pdf)

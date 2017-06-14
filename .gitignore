@@ -3,12 +3,15 @@
 
 ## Main PDF file
 carta-presentacion-curso.pdf
-*/beamer-clase*.pdf
-*/bibliography_example.pdf
-*/bibtex_example.pdf
-*/article_template.pdf
-*/fonts.pdf
+*/beamer-clase3.pdf
 */book_template.pdf
+examples/*/bibliography_example.pdf
+examples/*/bibtex_example.pdf
+examples/*/article_template.pdf
+examples/*/fonts.pdf
+examples/*/tabla-apaisada.pdf
+examples/*/two_abstracts.pdf
+examples/*/affiliations.pdf
 
 ## Core latex/pdflatex auxiliary files:
 *.aux

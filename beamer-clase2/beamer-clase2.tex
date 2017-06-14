@@ -3,6 +3,18 @@
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{fancyvrb}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{color}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=red,
+    citecolor=grren,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+\urlstyle{same}
 \definecolor{new_green}{HTML}{347F1F}
 
 
@@ -58,9 +70,9 @@
    \end{document}
   \end{Verbatim}
   }
-   \hfill
-   \column{0.4\textwidth}
-   {\scriptsize
+  \hfill
+  \column{0.4\textwidth}
+  {\scriptsize
    Declaro el tipo de documento, papel y tamaño de letra. 
    Defino la codificación del documento. \\
    \vspace{2.5em}
@@ -74,7 +86,7 @@
    Creo una sección y una subsección.
    Usando $*$ no se numera la sección.
    \vspace{4.5em}
-   }
+  }
  \end{columns}
 \end{frame}
 
@@ -84,6 +96,7 @@
  Comencemos a escribir nuestro primer artículo en \LaTeX{}...
  \end{center}
 \end{frame}
+
 
 \begin{frame}{Artículo Científico}
  \begin{center}
@@ -96,29 +109,28 @@
   \item Insertar tablas
   \item Hacer referencias cruzadas
   \item Notas de pié de página
+  \item Listas
+  \item Extras
  \end{itemize}
 \end{frame}
 
+
 \begin{frame}[fragile]{Artículo Científico - Ecuaciones}
- \begin{columns}
-  \column{0.7\textwidth}
-  {\color{new_green}
-  \begin{Verbatim}[fontsize=\scriptsize]
-   \begin{equation}
-   A_{m,n} = 
-  
+Se necesita agregar en el preámbulo el paquete: \textbackslash usepackage\{amsmath\}
+{\color{new_green}
+ \begin{Verbatim}[fontsize=\scriptsize]
+  \begin{equation}
+  A_{m,n} = 
   \begin{pmatrix}
-   a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
-   a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
-   \vdots  & \vdots  & \ddots & \vdots  \\
-   a_{m,1} & a_{m,2} & \cdots & a_{m,n} 
+  a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
+  a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
+  \vdots  & \vdots  & \ddots & \vdots  \\
+  a_{m,1} & a_{m,2} & \cdots & a_{m,n} 
   \end{pmatrix}
-  
   \label{Nombre para la referencia curzada.} 
   \end{equation}
-  \end{Verbatim}
-  }
- \end{columns}
+ \end{Verbatim}
+ }
  \begin{equation}
   {\scriptsize
   A_{m,n} = 
@@ -131,143 +143,143 @@
   \label{Nombre para la referencia curzada.} 
   }
  \end{equation}
+ {\scriptsize
+ \href{https://en.wikibooks.org/wiki/LaTeX/Mathematics}{Veamos más ejemplos en wikibooks}}
 \end{frame}
 
-\begin{frame}[fragile]{Artículo Científico - Referencias Cruzadas}
+\begin{frame}[fragile]{Artículo Científico - Referencias Cruzadas} \label{pag.ec}
 Con \LaTeX{}, podemos hacer fácilmente referencias a figuras, tablas y ecuaciones de nuestro documento.
 El mecanismo es muy fácil:
 $\backslash label \{ X \}$ - Con este comando se etiqueta el objeto. \\
 $\backslash ref \{ X \}$ - Con este comando se referencia  el objeto en el texto.
  
 La etiqueta puede ser elegida libremente sin ningún criterio, aunque es recomendable agregar un pequeño indicador de qué objeto estamos referenciando. Por ejemplo, en el caso de ecuaciones:
- 
 \begin{columns}
-\column{0.4\textwidth}
-{\color{new_green} \scriptsize
-\begin{verbatim}
-\begin{equation}
-  {d\over dt }\frac{\partial L} -
-  \frac{\partial L}{\partial x} 
-  {\partial \dot{x}} = 0
-\label{eq:lagrange}
-\end{equation}
-\end{verbatim}
-}
-\column{0.4\textwidth}
-\begin{equation}
+ \column{0.4\textwidth}
+ {\color{new_green} \scriptsize
+ \begin{verbatim}
+  \begin{equation}
   \frac{\partial L}{\partial x} - 
   {d\over dt }\frac{\partial L}
   {\partial \dot{x}} = 0
-\label{eq:lagrange}
-\end{equation}
+  \label{eq:lagrange}
+  \end{equation}
+ \end{verbatim}
+ }
+ \column{0.4\textwidth}
+ \begin{equation}
+  \frac{\partial L}{\partial x} - 
+  {d\over dt }\frac{\partial L}
+  {\partial \dot{x}} = 0
+  \label{eq:lagrange}
+ \end{equation}
 \end{columns}
-
 \end{frame}
 
 \begin{frame}{Artículo Científico - Referencias Cruzadas}
 Práctica:
 \begin{itemize}
-\item Creemos una ecuación en un artículo científico,
-\item Agreguémosle una etiqueta,
-\item Hagamos una referencia cruzada hacia ella en el cuerpo del texto.
+ \item Creemos una ecuación en un artículo científico,
+ \item Agreguémosle una etiqueta,
+ \item Hagamos una referencia cruzada hacia ella en el cuerpo del texto.
 \end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]{Artículo Científico - Figuras}
- Se necesita agregar en el preámbulo el paquete:
- \textbackslash usepackage\{graphicx\}
- \vspace{1em}
- \begin{columns}
-  \column{0.8\textwidth}
-  {\color{new_green}
-  \begin{Verbatim}[fontsize=\scriptsize]
-   \begin{figure}[Posición]
-    \centering
-    \includegraphics[width=0.5\textwidth]{figure/name.png}
-    \caption{Epígrafe.}
-    \label{Nombre para la referencia curzada.}
-   \end{figure}
-  \end{Verbatim}
+Se necesita agregar en el preámbulo el paquete:
+\textbackslash usepackage\{graphicx\}
+\vspace{1em}
+\begin{columns}
+ \column{0.8\textwidth}
+ {\color{new_green}
+ \begin{Verbatim}[fontsize=\scriptsize]
+  \begin{figure}[Posición]
+  \centering
+  \includegraphics[width=0.5\textwidth]{figure/name.png}
+  \caption{Epígrafe.}
+  \label{Nombre para la referencia curzada.}
+  \end{figure}
+ \end{Verbatim}
   }
-  \hfill
-  \column{0.3\textwidth}
-  \begin{table}
-   \scriptsize
-    \begin{tabular}[h]{|c|l|}
-     \hline
-     \multicolumn{2}{|c|}{Posición} \\
-     \hline
-     h & Acá \\ \hline
-     t & Top \\ \hline
-     b & Bottom \\ \hline
-     p & New page \\ \hline
-     ! & Forzado \\ \hline
-    \end{tabular}
-  \end{table}
- \end{columns}
+ \hfill
+ \column{0.3\textwidth}
+ \begin{table}
+  \scriptsize
+  \begin{tabular}[h]{|c|l|}
+   \hline
+   \multicolumn{2}{|c|}{Posición} \\
+   \hline
+    h & Acá \\ \hline
+    t & Top \\ \hline
+    b & Bottom \\ \hline
+    p & New page \\ \hline
+    ! & Forzado \\ \hline
+  \end{tabular}
+ \end{table}
+\end{columns}
 \end{frame}
 
 \begin{frame}[fragile]{Artículo Científico - Figuras}
 Al igual que con las ecuaciones, utilizamos una etiqueta en particular para las referencias de figuras. Por ejemplo:
-  {\color{new_green}
-  \begin{Verbatim}[fontsize=\scriptsize]
-   \begin{figure}[Posición]
-    \centering
-    \includegraphics[width=0.5\textwidth]{figure/name.png}
-    \caption{Epígrafe.}
-    \label{fig:ejemplo-de-figura}
-   \end{figure}
-  \end{Verbatim}
-  }
-
+{\color{new_green}
+\begin{Verbatim}[fontsize=\scriptsize]
+ \begin{figure}[Posición]
+  \centering
+  \includegraphics[width=0.5\textwidth]{figure/name.png}
+  \caption{Epígrafe.}
+  \label{fig:ejemplo-de-figura}
+ \end{figure}
+\end{Verbatim}
+}
 \end{frame}
+
 
 \begin{frame}{Artículo Científico - Figuras}
 Práctica:
 \begin{itemize}
-\item Eligamos una figura a elección propia,
-\item Creemos un nuevo artículo científico,
-\item Creemos una carpeta llamada figs dentro del directorio del proyecto,
-\item Insertemos la figura en el documento,
-\item Agreguémosle una etiqueta,
-\item Hagamos una referencia cruzada hacia ella en el cuerpo del texto.
+ \item Elijamos una figura a elección propia,
+ \item Creemos un nuevo artículo científico,
+ \item Creemos una carpeta llamada figs dentro del directorio del proyecto,
+ \item Insertemos la figura en el documento,
+ \item Agreguémosle una etiqueta,
+ \item Hagamos una referencia cruzada hacia ella en el cuerpo del texto.
 \end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]{Artículo Científico - Tablas}
- El entorno  \textbf{table y tabular} se puede utilizar para incertar tablas con líneas horizontales y verticales opcionales.
- \LaTeX{} determina automáticamente el ancho de las columnas.
- {\color{new_green}
- \begin{Verbatim}[fontsize=\scriptsize]
-  \begin{table}[Posición]
+El entorno  \textbf{table y tabular} se puede utilizar para incertar tablas con líneas horizontales y verticales opcionales.
+\LaTeX{} determina automáticamente el ancho de las columnas.
+{\color{new_green}
+\begin{Verbatim}[fontsize=\scriptsize]
+ \begin{table}[Posición]
    \begin{tabular}{Aspecto}
-    Acá escribo la tabla...
+   Acá escribo la tabla...
    \end{tabular}
    \caption{Epígrafe.}
    \label{Nombre de la referencia cruzada}
   \end{table}
- \end{Verbatim}
- }
- \begin{table}
-  \scriptsize
-  \begin{tabular}[h]{|c|l|c|l|c|l|}
-   \hline
-   \multicolumn{2}{|c|}{Posición} & \multicolumn{2}{|c|}{Aspecto} & \multicolumn{2}{|c|}{Otros}\\
-   \hline
-   h & Acá      & l    & Justificado izquierdo & \&                      & Separador de columnas \\ \hline
-   t & Top      & c    & Centrado              & $\backslash \backslash$ & Iniciar nueva linea\\ \hline
-   b & Bottom   & r    & Justificado derecho   & $\backslash$hline       & Linea horizontal \\ \hline
-   p & New page &  $|$ & Linea vertical        &                         &    \\ \hline
-   ! & Forzar   & $\|$ & Linea vertical doble  &                         &     \\ \hline
-  \end{tabular}
-  \end{table}
+\end{Verbatim}
+}
+\begin{table}
+\scriptsize
+ \begin{tabular}[h]{|c|l|c|l|c|l|}
+  \hline
+  \multicolumn{2}{|c|}{Posición} & \multicolumn{2}{|c|}{Aspecto} & \multicolumn{2}{|c|}{Otros}\\
+  \hline
+  h & Acá      & l    & Justificado izquierdo & \&                      & Separador de columnas \\ \hline
+  t & Top      & c    & Centrado              & $\backslash \backslash$ & Iniciar nueva linea\\ \hline
+  b & Bottom   & r    & Justificado derecho   & $\backslash$hline       & Linea horizontal \\ \hline
+  p & New page &  $|$ & Linea vertical        &                         &    \\ \hline
+  ! & Forzar   & $\|$ & Linea vertical doble  &                         &     \\ \hline
+ \end{tabular}
+\end{table}
 \end{frame}
 
 \begin{frame}[fragile]{Artículo Científico - Tablas}
- Ejemplo:
- \begin{columns}
-  \column{0.6\textwidth}
-  {\color{new_green}
+Ejemplo:
+\begin{columns}
+ \column{0.6\textwidth}
+ {\color{new_green}
   \begin{Verbatim}[fontsize=\scriptsize]
    \begin{table}
     \begin{tabular}{ll|r}
@@ -282,156 +294,285 @@ Práctica:
      Emu       & stuffed     & 33.33      \\
      \hline
     \end{tabular}
-   \label{tab:precios}
+    \caption{Epígrafe.}
+    \label{tab:precios}
    \end{table}
   \end{Verbatim}
-  }
-  \hfill
-  \column{0.5\textwidth}
-  \begin{table}
-   \scriptsize
-   \begin{tabular}{ll|r}
-    \hline
-    \multicolumn{2}{c|}{Item} \\
-    \cline{1-2}
-    Animal    & Description & Price (\$) \\
-    \hline
-    Gnat      & per gram    & 13.65      \\
-              & each        & 0.01       \\
-    Gnu       & stuffed     & 92.50      \\
-    Emu       & stuffed     & 33.33      \\
-    \hline
-   \end{tabular}
+ }
+ \hfill
+ \column{0.5\textwidth}
+ \begin{table}
+  \scriptsize
+  \begin{tabular}{ll|r}
+   \hline
+   \multicolumn{2}{c|}{Item} \\
+   \cline{1-2}
+   Animal    & Description & Price (\$) \\
+   \hline
+   Gnat      & per gram    & 13.65      \\
+             & each        & 0.01       \\
+   Gnu       & stuffed     & 92.50      \\
+   Emu       & stuffed     & 33.33      \\
+   \hline
+  \end{tabular}
   \label{tab:precios}
-  \end{table}
+  \caption{Epígrafe.}
+ \end{table}
+ \scriptsize{
+ Si quiero que diga ``Tabla'' en vez de ``Cuadro'' defino un comnado en el cuerpo del documento:
+ {\color{new_green}
+ \begin{Verbatim}
+  \renewcommand{\tablename}{Tabla} 
+  \end{Verbatim}
+  }
+  }
  \end{columns}
 \end{frame}
+
 
 \begin{frame}{Artículo Científico - Tablas}
 Práctica:
 \begin{itemize}
-\item Insertemos una tabla en un artículo a través del asistente de TexMaker,
-\item Agreguémosle una etiqueta,
-\item Hagamos una referencia cruzada hacia ella en el cuerpo del texto.
+ \item Insertemos una tabla en un artículo a través del asistente de TexMaker,
+ \item Agreguémosle una etiqueta,
+ \item Hagamos una referencia cruzada hacia ella en el cuerpo del texto.
 \end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]{Artículo Científico - Nota de pié de página}
- Las notas de pié de página deben colocarse siempre después de la palabra o frase a la que se refieren.
- La nota se imprime al pie de la página actual. 
- {\color{new_green}
-   \begin{Verbatim}[fontsize=\scriptsize]
-    Las notas de pié de pégina\footnote{Esto es una nota de pié de página.}
-    son muy usadas por las personas que usan \LaTeX.
-   \end{Verbatim}
-  }
-  Las notas de pié de página\footnote{Esto es una nota de pié de página.}
+Las notas de pié de página deben colocarse siempre después de la palabra o frase a la que se refieren.
+La nota se imprime al pie de la página actual. 
+{\color{new_green}
+ \begin{Verbatim}[fontsize=\scriptsize]
+  Las notas de pié de pégina\footnote{Esto es una nota de pié de página.}
   son muy usadas por las personas que usan \LaTeX.
+ \end{Verbatim}
+}
+Las notas de pié de página\footnote{Esto es una nota de pié de página.}
+son muy usadas por las personas que usan \LaTeX.
 \end{frame}
+
 
 \begin{frame}[fragile]{Artículo Científicos - Listas}
 En artículos científicos se suelen utilizar listas o enumeraciones. Para ello \LaTeX{} ofrece entornos que cumplen esas funciones:
-
 \begin{itemize}
-\item itemize: para listas con elementos no numerados (bullets)
-\item enumerate: para elementos numerados
-\item description: para listas descriptivas
+ \item itemize: para listas con elementos no numerados (bullets)
+ \item enumerate: para elementos numerados
+ \item description: para listas descriptivas
 \end{itemize}
 
 Ejemplos:
-
 \begin{columns}
-\column{0.4\textwidth}
-{\color{new_green} \scriptsize
-\begin{verbatim}
-\begin{itemize}
-\item Primer elemento
-\item Segundo elemento
-\end{itemize}
-\end{verbatim}
-}
-\column{0.6\textwidth}
-\begin{itemize}
-\item Primer elemento
-\item Segundo elemento
-\end{itemize}
-
+ \column{0.4\textwidth}
+ {\color{new_green} \scriptsize
+ \begin{verbatim}
+  \begin{itemize}
+   \item Primer elemento
+   \item Segundo elemento
+  \end{itemize}
+ \end{verbatim}
+ }
+ \column{0.6\textwidth}
+ \begin{itemize}
+  \item Primer elemento
+  \item Segundo elemento
+ \end{itemize}
 \end{columns}
 \end{frame}
 
+
 \begin{frame}[fragile]{Artículo Científicos - Listas}
-
 \begin{columns}
-\column{0.4\textwidth}
-{\color{new_green} \scriptsize
-\begin{verbatim}
-\begin{enumerate}
-\item Primer elemento
-\item Segundo elemento
-\end{enumerate}
-\end{verbatim}
-}
-\column{0.6\textwidth}
-\begin{enumerate}
-\item Primer elemento
-\item Segundo elemento
-\end{enumerate}
+ \column{0.4\textwidth}
+ {\color{new_green} \scriptsize
+ \begin{verbatim}
+  \begin{enumerate}
+   \item Primer elemento
+   \item Segundo elemento
+  \end{enumerate}
+ \end{verbatim}
+ }
+ \column{0.6\textwidth}
+ \begin{enumerate}
+  \item Primer elemento
+  \item Segundo elemento
+ \end{enumerate}
 \end{columns}
 
 \begin{columns}
-\column{0.4\textwidth}
-{\color{new_green} \scriptsize
-\begin{verbatim}
-\begin{description}
-\item [Hormiga] Es un insecto
-\item [Elefante] Es un mamífero
-\end{description}
-\end{verbatim}
-}
-\column{0.6\textwidth}
-\begin{description}
-\item [Hormiga] Es un insecto
-\item [Elefante] Es un mamífero
-\end{description}
+ \column{0.4\textwidth}
+ {\color{new_green} \scriptsize
+ \begin{verbatim}
+  \begin{description}
+   \item [Hormiga] Es un insecto
+   \item [Elefante] Es un mamífero
+  \end{description}
+ \end{verbatim}
+ }
+ \column{0.6\textwidth}
+ \begin{description}
+  \item [Hormiga] Es un insecto
+  \item [Elefante] Es un mamífero
+ \end{description}
 \end{columns}
-
 \vspace{0.5em}
 {\small También se pueden anidar listas. Por ejemplo:}
-
 \vspace{-1em}
 
 \begin{columns}
-\column{0.4\textwidth}
-{\color{new_green} \scriptsize
-\begin{verbatim}
-\begin{enumerate}
-\item Primer elemento
+ \column{0.4\textwidth}
+ {\color{new_green} \scriptsize
+ \begin{verbatim}
+  \begin{enumerate}
+   \item Primer elemento
+    \begin{enumerate}
+     \item Primera porción
+     \item Segunda porción
+    \end{enumerate}
+   \item Segundo elemento
+  \end{enumerate}
+ \end{verbatim}
+ }
+ \column{0.6\textwidth}
+ \begin{enumerate}
+  \item Primer elemento
    \begin{enumerate}
-   \item Primera porción
-   \item Segunda porción
+    \item Primera porción
+    \item Segunda porción
    \end{enumerate}
-\item Segundo elemento
-\end{enumerate}
-\end{verbatim}
-}
-\column{0.6\textwidth}
-\begin{enumerate}
-\item Primer elemento
-   \begin{enumerate}
-   \item Primera porción
-   \item Segunda porción
-   \end{enumerate}
-\item Segundo elemento
-\end{enumerate}
+  \item Segundo elemento
+ \end{enumerate}
 \end{columns}
 \end{frame}
+
 
 \begin{frame}{Artículo Científico - Notas al Pie y Listas}
 Práctica:
 \begin{itemize}
-\item Creemos una nota al pie de página.
-\item Creemos varios tipos de listas.
+ \item Creemos una nota al pie de página.
+ \item Creemos varios tipos de listas.
 \end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{Artículo Científicos - Extras}
+\textbf{Interlineado}
+
+Se necesita agregar en el preámbulo el paquete:
+\textbackslash usepackage\{setspace\} 
+{\color{new_green} \scriptsize
+ \begin{verbatim}
+  \doublespacing    % Interlineado doble
+  \onehalfspace     % Interlineado uno y medio
+  \singlespace      % Interlineado simple
+  \spacing{XXX}     % Interlineado a elección (sin unidad)
+  \setstretch{XXX}  
+ \end{verbatim}
+}
+(Se deben escribir en el cuerpo del documento)
+
+\textbf{Numeración de lineas}
+
+Se necesita agregar en el preámbulo el paquete:
+\textbackslash usepackage\{lineno\} 
+\begin{columns}
+ \column{0.2\textwidth}
+ {\color{new_green} \scriptsize
+ \begin{verbatim}
+  \modulolinenumbers[XXX]
+  \linenumbers
+ \end{verbatim}
+ }
+
+\column{0.4\textwidth} \scriptsize{
+Al escribir estos dos comandos en el cuerpo del documento aparece la numeración cada XXX lineas
+}
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Artículo Científicos - Extras}
+\textbf{Símbolo de ``Grado''}
+
+Se necesita agregar en el preámbulo el paquete:
+\textbackslash usepackage\{textcomp\} o \textbackslash usepackage\{usepackage\{gensymb\}
+
+\begin{columns}
+ \column{0.4\textwidth}
+ {\color{new_green} \scriptsize
+ \begin{verbatim}
+  The study area is located
+  between 37{\textdegree} and
+  39{\degree} S in the
+  Southern Central Andes.
+ \end{verbatim}
+ }
+ \column{0.4\textwidth} \scriptsize{
+ The study area is located between 37{\textdegree} and 39{\degree} S in the Southern Central Andes.
+ }
+\end{columns}
+
+\textbf{Texto en color}
+
+Se necesita agregar en el preámbulo el paquete:
+\textbackslash usepackage\{color\}
+\begin{columns}
+ \column{0.4\textwidth}
+ {\color{new_green} \scriptsize
+ \begin{verbatim}
+  The study area is located in 
+  the \textcolor{red}{Southern
+  Central Andes}.
+ \end{verbatim}
+ }
+ \column{0.4\textwidth}
+ {\scriptsize
+ The study area is located in the \textcolor{red}{Southern Central Andes}.
+ }
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Artículo Científicos - Extras}
+\textbf{Hipervínculos} 
+
+Se necesita agregar en el preámbulo el paquete:
+\textbackslash usepackage\{hyperref\}
+
+Entonces todos los elementos con referencias cruzadas se convierten en hipervínculos.
+{\color{new_green} \footnotesize
+\begin{verbatim}
+ \hypersetup{        % Configura el comportamiento de los enlaces
+  colorlinks=true,   % False: recuadra y True: colorea los enlaces
+  linkcolor=red,     % Color de las referencias cruzadas
+  citecolor=green    % Color de las referencias bibliográficas
+  filecolor=magenta, % Color de los enlaces de archivos locales
+  urlcolor=cyan,     % Color de los enlaces de web sites
+  }
+ \urlstyle{same}      % Los enlaces url tendrán el estilo del documento
+\end{verbatim}
+}
+\end{frame}
+
+\begin{frame}[fragile]{Artículo Científicos - Extras}
+Ejemplo:
+{\color{new_green} \scriptsize
+\begin{verbatim}
+ La matrix que que usamos es Ec.\ref{eq:lagrange} que se
+ encuenta en la página \pageref{sixth}.
+
+ Visiten la pagina wikibooks
+ (\url{https://en.wikibooks.org/wiki/LaTeX/Hyperlinks}) para más
+ información o abran el archivo
+ \href{run:../article_template/article_template.pdf}{article_template.pdf}
+\end{verbatim}
+}
+\scriptsize{
+La matrix que que usamos es Ec.\ref{eq:lagrange} que se encuenta en la página \pageref{pag.ec}.
+
+Visiten la pagina wikibooks
+(\url{https://en.wikibooks.org/wiki/LaTeX/Hyperlinks}) para más
+información o abran el archivo
+\href{../article_template/article_template.pdf}{article\_template.pdf}.
+}
 \end{frame}
 
 \end{document}

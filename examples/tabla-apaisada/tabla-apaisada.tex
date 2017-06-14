@@ -1,0 +1,102 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{pdflscape}
+\title{Tabla Apaisada}
+\author{Santiago Soler}
+\date{}
+\usepackage{lipsum}
+
+\begin{document}
+
+\renewcommand{\tablename}{Tabla}
+
+\maketitle
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum
+ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu libe-
+ro, nonummy eget, consectetuer id, vulputate a, magna. Donec vehicula augue eu neque.
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+egestas. Mauris ut leo. Cras viverra metus rhoncus sem. Nulla et lectus vestibulum urna
+fringilla ultrices. Phasellus eu tellus sit amet tortor gravida placerat. Integer sapien est,
+iaculis in, pretium quis, viverra ac, nunc. Praesent eget sem vel leo ultrices bibendum.
+Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar at, mollis ac, nulla. Curabi-
+tur auctor semper nulla. Donec varius orci eget risus. Duis nibh mi, congue eu, accumsan
+eleifend, sagittis quis, diam. Duis eget orci sit amet orci dignissim rutrum.
+Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem
+non justo. Nam lacus libero, pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet,
+tortor sed accumsan bibendum, erat ligula aliquet magna, vitae ornare odio metus a mi.
+Morbi ac orci et nisl hendrerit mollis. Suspendisse ut massa. Cras nec ante. Pellentesque a
+nulla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+mus. Aliquam tincidunt urna. Nulla ullamcorper vestibulum turpis. Pellentesque cursus
+luctus mauris.
+
+Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat at, tincidunt
+tristique, libero. Vivamus viverra fermentum felis. Donec nonummy pellentesque ante.
+Phasellus adipiscing semper elit. Proin fermentum massa ac quam. Sed diam turpis,
+molestie vitae, placerat a, molestie nec, leo. Maecenas lacinia. Nam ipsum ligula, eleifend
+at, accumsan nec, suscipit a, ipsum. Morbi blandit ligula feugiat magna. Nunc eleifend
+consequat lorem. Sed lacinia nulla vitae enim. Pellentesque tincidunt purus vel magna.
+Integer non enim. Praesent euismod nunc eu purus. Donec bibendum quam in tellus.
+Nullam cursus pulvinar lectus. Donec et mi. Nam vulputate metus eu enim. Vestibulum
+pellentesque felis eu massa.
+
+Quisque ullamcorper placerat ipsum. Cras nibh. Morbi vel justo vitae lacus tincidunt
+ultrices. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In hac habitasse platea
+dictumst. Integer tempus convallis augue. Etiam facilisis. Nunc elementum fermentum
+wisi. Aenean placerat. Ut imperdiet, enim sed gravida sollicitudin, felis odio placerat
+quam, ac pulvinar elit purus eget enim. Nunc vitae tortor. Proin tempus nibh sit amet
+nisl. Vivamus quis tortor vitae risus porta vehicula.
+
+Fusce mauris. Vestibulum luctus nibh at lectus. Sed bibendum, nulla a faucibus sem-
+per, leo velit ultricies tellus, ac venenatis arcu wisi vel nisl. Vestibulum diam. Aliquam
+pellentesque, augue quis sagittis posuere, turpis lacus congue quam, in hendrerit risus
+
+
+\newgeometry{hmargin=3cm, vmargin=3cm}
+\begin{landscape}
+\vspace*{\fill}
+\begin{table}[t]
+\centering
+\begin{tabular}{|r|r|r|r|r|r|r|}
+\hline
+\multicolumn{1}{|c|}{Tabla} & \multicolumn{1}{|c|}{Con} & \multicolumn{1}{|c|}{Muchos} & \multicolumn{1}{|c|}{Campos} & \multicolumn{1}{|c|}{No} & \multicolumn{1}{|c|}{Entra} & \multicolumn{1}{|c|}{Verticalmente} \\ \hline
+1 & 1 & 2,71828182845904 & 0,002718281828459 & 0 & 0,434294481903252 & enero \\
+2 & 4 & 54,5981500331442 & 0,054598150033144 & 0,602059991327962 & 1,73717792761301 & febrero \\
+3 & 9 & 8103,08392757538 & 8,10308392757538 & 0,954242509439325 & 3,90865033712927 & marzo \\
+4 & 16 & 8886110,52050787 & 8886,11052050787 & 1,20411998265592 & 6,94871171045203 & abril \\
+5 & 25 & 72004899337,3859 & 72004899,3373859 & 1,39794000867204 & 10,8573620475813 & mayo \\
+6 & 36 & 4311231547115195 & 4311231547115,2 & 1,55630250076729 & 15,6346013485171 & junio \\
+7 & 49 & 1,9073465724951E+021 & 1,9073465724951E+018 & 1,69019608002851 & 21,2804296132593 & julio \\
+8 & 64 & 6,23514908081162E+027 & 6,23514908081162E+024 & 1,80617997398389 & 27,7948468418081 & agosto \\
+9 & 81 & 1,50609731458503E+035 & 1,50609731458503E+032 & 1,90848501887865 & 35,1778530341634 & septiembre \\
+10 & 100 & 2,68811714181614E+043 & 2,68811714181614E+040 & 2 & 43,4294481903252 & octubre \\
+11 & 121 & 3,54513118276117E+052 & 3,54513118276117E+049 & 2,08278537031645 & 52,5496323102935 & noviembre \\
+12 & 144 & 3,45466065671755E+062 & 3,45466065671755E+059 & 2,15836249209525 & 62,5384053940683 & diciembre \\
+13 & 169 & 2,48752492831774E+073 & 2,48752492831774E+070 & 2,22788670461367 & 73,3957674416496 & enero \\
+14 & 196 & 1,32348326156457E+085 & 1,32348326156457E+082 & 2,29225607135648 & 85,1217184530374 & febrero \\
+15 & 225 & 5,20305513788485E+097 & 5,20305513788485E+094 & 2,35218251811136 & 97,7162584282317 & marzo \\
+\hline 
+\end{tabular}
+\caption{Tabla muy ancha como para ubicarla verticalmente}
+\end{table}
+\vspace*{\fill}
+\end{landscape}
+
+
+Quisque ullamcorper placerat ipsum. Cras nibh. Morbi vel justo vitae lacus tincidunt
+ultrices. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In hac habitasse platea
+dictumst. Integer tempus convallis augue. Etiam facilisis. Nunc elementum fermentum
+wisi. Aenean placerat. Ut imperdiet, enim sed gravida sollicitudin, felis odio placerat
+quam, ac pulvinar elit purus eget enim. Nunc vitae tortor. Proin tempus nibh sit amet
+nisl. Vivamus quis tortor vitae risus porta vehicula.
+Fusce mauris. Vestibulum luctus nibh at lectus. Sed bibendum, nulla a faucibus sem-
+per, leo velit ultricies tellus, ac venenatis arcu wisi vel nisl. Vestibulum diam. Aliquam
+pellentesque, augue quis sagittis posuere, turpis lacus congue quam, in hendrerit risus
+
+
+\end{document}
