@@ -329,5 +329,96 @@ escribamos en este archivo.
 \end{frame}
 
 
+\section{Tapa}
+
+\begin{frame}[fragile]{Construcción de la Tapa}
+La construcción de la Tapa en \LaTeX{} requiere un poco de trabajo y uso de la sintaxis y comandos, pero veremos que no es difícil de aprender.
+
+Vamos a construir un ejemplo de tapa para una Tesis, en la cual incluiremos:
+\begin{itemize}
+\item Título de la Tesis
+\item Autor, Director
+\item Universidad y Facultad en la cual se desarrolla la Tesis
+\item Fecha
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Construcción de la Tapa}
+
+En primer lugar, utilizaremos el entorno \textbf{titlepage} para generarla.
+
+Luego, utilizaremos el comando \textbf{newgeometry} para modificar únicamente la geometría de la tapa.
+
+Con el comando \textbf{vspace} generamos un espacio vertical en blanco de la longitud que deseemos.
+
+Con el comando \textbf{rule} dibujamos una línea horizontal del ancho que deseemos.
+
+Luego, con el entorno \textbf{minipage} podemos dividir la página verticalmente en columnas.
+
+
+
+\end{frame}
+
+\begin{frame}[fragile]{Tapa - Ejemplo}
+
+\begin{verbatim}
+\begin{titlepage}
+\newgeometry{right=4cm, left=4cm, top=5cm, bottom=5cm}
+\center
+
+\textsc{\LARGE Universidad Nacional de San Juan}
+\vspace{1cm}
+\textsc{\Large Facultad de Ciencias Exactas, Físicas
+        y Naturales}
+\vspace{1cm}
+\rule{\linewidth}{0.5mm}
+\vspace{0.5cm}
+\textbf{\huge Título}
+\rule{\linewidth}{0.5mm}
+\vspace{1.8cm}
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Tapa - Ejemplo}
+
+\begin{verbatim}
+\begin{minipage}{0.4\textwidth}
+\large
+\begin{flushleft}
+Autor:\\
+\textsc{Juan Perez}
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\large
+\begin{flushright}
+Director:\\
+\textsc{Dr. Pedro Gomez}
+\end{flushright}
+\end{minipage}
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Tapa - Ejemplo}
+
+\begin{verbatim}
+\vspace{\fill}
+{\large \today{}}
+\end{titlepage}
+
+\clearpage{}
+\thispagestyle{empty}
+\end{verbatim}
+\end{frame}
+
+
+\begin{frame}{Tapa - Templates}
+
+Algunos templates de tapas:
+
+\url{https://www.overleaf.com/gallery/tagged/title-page/}
+\end{frame}
 
 \end{document}
