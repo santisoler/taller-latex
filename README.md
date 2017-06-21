@@ -62,6 +62,7 @@ Escribinos a santiago.r.soler@gmail.com y pesce.agustina@gmail.com
 
 * [Clase 1: Introducción](https://github.com/santis19/taller-latex/raw/master/beamer-clase1/beamer-clase1.pdf)
 * [Clase 2: Artículo Científico](https://github.com/santis19/taller-latex/raw/master/beamer-clase2/beamer-clase2.pdf)
+* [Clase 3: Bibliografía](https://github.com/santis19/taller-latex/raw/master/beamer-clase3/beamer-clase3.pdf)
 
 ### Respuestas a dudas en las Clases
 
