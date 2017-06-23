@@ -229,7 +229,6 @@ Existen varios estilos de bibliografía:
 
 \begin{frame}[fragile]{\BibTeX{} - Natbib}
 Cuando utilizamos \BibTeX{} es muy recomendable importar el paquete ``natbib''.
-
 {\color{new_green} \scriptsize
 \begin{verbatim}
 \usepackage{natbib}
@@ -237,6 +236,13 @@ Cuando utilizamos \BibTeX{} es muy recomendable importar el paquete ``natbib''.
 }
 
 Natbib modifica el esquema de citas. En vez de introducir la cita entre corchetes, lo hace limpiamente o entre paréntesis. Además incorpora características estéticas, como por ejemplo abreviar con et.al. los nombres en publicaciones con más de dos autores.
+
+También es recomendable acompañarlo con estilos de bibliografía como \textbf{apalike}:
+{\color{new_green} \scriptsize
+\begin{verbatim}
+\bibliographystyle{apalike}
+\end{verbatim}
+}
 
 El comando ``\textbackslash cite{}'' se divide en dos nuevos comandos:
 {\color{new_green} \scriptsize
