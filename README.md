@@ -1,4 +1,4 @@
-![Poster Taller](https://raw.githubusercontent.com/santis19/taller-latex/master/poster/poster-taller-latex.png)
+![Poster Taller](https://raw.githubusercontent.com/santisoler/taller-latex/master/poster/poster-taller-latex.png)
 
 ## Si tenés intenciones de participar del Taller, ingresá tus datos [acá](https://docs.google.com/forms/d/e/1FAIpQLSeSHYbCO4y1PWeqs_dhnhWpDhGIMngRbVLaX2Xg48lGQwnnFA/viewform?usp=sf_link)
 
@@ -60,26 +60,26 @@ Escribinos a santiago.r.soler@gmail.com y pesce.agustina@gmail.com
 
 ### Presentaciones de las Clases
 
-* [Clase 1: Introducción](https://github.com/santis19/taller-latex/raw/master/beamer-clase1/beamer-clase1.pdf)
-* [Clase 2: Artículo Científico](https://github.com/santis19/taller-latex/raw/master/beamer-clase2/beamer-clase2.pdf)
-* [Clase 3: Bibliografía](https://github.com/santis19/taller-latex/raw/master/beamer-clase3/beamer-clase3.pdf)
-* [Clase 4: Libro](https://github.com/santis19/taller-latex/raw/master/beamer-clase4/beamer-clase4.pdf)
+* [Clase 1: Introducción](https://github.com/santisoler/taller-latex/raw/master/beamer-clase1/beamer-clase1.pdf)
+* [Clase 2: Artículo Científico](https://github.com/santisoler/taller-latex/raw/master/beamer-clase2/beamer-clase2.pdf)
+* [Clase 3: Bibliografía](https://github.com/santisoler/taller-latex/raw/master/beamer-clase3/beamer-clase3.pdf)
+* [Clase 4: Libro](https://github.com/santisoler/taller-latex/raw/master/beamer-clase4/beamer-clase4.pdf)
 
 ### Respuestas a dudas en las Clases
 
-* [Ejemplos de cómo resolver algunas de las dudas que surgieron en clase](https://github.com/santis19/taller-latex/tree/master/examples)
-* Algunas respuestas a dudas que surgieron en clase: [aquí](https://github.com/santis19/taller-latex/raw/master/respuestas-dudas/respuestas-dudas.pdf)
-* Cómo cambiar la fuente de todo el documento: vean [este ejemplo](https://github.com/santis19/taller-latex/blob/master/examples/fonts/fonts.tex).
+* [Ejemplos de cómo resolver algunas de las dudas que surgieron en clase](https://github.com/santisoler/taller-latex/tree/master/examples)
+* Algunas respuestas a dudas que surgieron en clase: [aquí](https://github.com/santisoler/taller-latex/raw/master/respuestas-dudas/respuestas-dudas.pdf)
+* Cómo cambiar la fuente de todo el documento: vean [este ejemplo](https://github.com/santisoler/taller-latex/blob/master/examples/fonts/fonts.tex).
 * Tablas apaisadas: [leer esto](https://tex.stackexchange.com/questions/3930/how-to-rotate-landscape-table-page-in-pdf#123330).
 * Listas horizontales: Leer la respuesta de [este post](https://tex.stackexchange.com/questions/146306/how-to-make-horizontal-lists/324740#324740) que hace uso del paquete **tasks**.
-* Afiliaciones de autores en maketitle: [post](https://tex.stackexchange.com/questions/107739/authors-with-multiple-affiliations/370813#370813) y [ejemplo](https://github.com/santis19/taller-latex/blob/master/examples/affiliations/affiliations.tex)
-* Crear dos abstract: uno en español y otro en inglés. [Aquí](https://github.com/santis19/taller-latex/blob/master/examples/two_abstracts/two_abstracts.tex) hay un ejemplo.
+* Afiliaciones de autores en maketitle: [post](https://tex.stackexchange.com/questions/107739/authors-with-multiple-affiliations/370813#370813) y [ejemplo](https://github.com/santisoler/taller-latex/blob/master/examples/affiliations/affiliations.tex)
+* Crear dos abstract: uno en español y otro en inglés. [Aquí](https://github.com/santisoler/taller-latex/blob/master/examples/two_abstracts/two_abstracts.tex) hay un ejemplo.
 
 
 ### Otros Recursos 
 
 * [The No So Short Introduction to LaTeX](http://ftp.inf.utfsm.cl/pub/tex-archive/info/lshort/english/lshort.pdf)
-* [Introducción a LaTeX. Carlos M. Silva (2009)](https://github.com/santis19/taller-latex/raw/master/documentos/Silva2009.pdf)
+* [Introducción a LaTeX. Carlos M. Silva (2009)](https://github.com/santisoler/taller-latex/raw/master/documentos/Silva2009.pdf)
 * [Wikibook de LaTeX](https://en.wikibooks.org/wiki/LaTeX)
 * The LaTeX Companion: Libro muy completo. [Aquí](http://ptgmedia.pearsoncmg.com/images/9780201362992/samplepages/0201362996.pdf) se puede leer un capítulo de muestra.
 * [Writing a Thesis with LaTeX](https://tug.org/pracjourn/2008-1/mori/mori.pdf)
@@ -93,4 +93,4 @@ Los templates, documentos, códigos y todo el material restante presente en este
 
 ![CreativeCommons](https://licensebuttons.net/l/by-sa/4.0/88x31.png)
 
-A excepción de [documentos/Silva2009](https://github.com/santis19/taller-latex/raw/master/documentos/Silva2009.pdf), Copyright (c) 2009 Carlos M. Silva. Todos los derechos reservados.
+A excepción de [documentos/Silva2009](https://github.com/santisoler/taller-latex/raw/master/documentos/Silva2009.pdf), Copyright (c) 2009 Carlos M. Silva. Todos los derechos reservados.
